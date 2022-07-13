@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "9.22"
+    ComputedModelVersion    "9.39"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -51,6 +51,12 @@ Model {
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
+      Reference		      "dspfdesign/Lowpass Filter"
+      Path		      "drunk/Lowpass Filter"
+      SID		      "416"
+      Type		      "LIBRARY_BLOCK"
+    }
+    ExternalFileReference {
       Reference		      "quarc_library/Discrete/Bias Removal"
       Path		      "drunk/QBot 2e Basic Motor Commands and Sensor Measurement/Bias Removal"
       SID		      "366"
@@ -66,12 +72,6 @@ Model {
       Reference		      "quarc_library/Data Acquisition/Generic/Immediate I//O/HIL Write"
       Path		      "drunk/QBot 2e Basic Motor Commands and Sensor Measurement/QBot2e_IO_Basic/HIL Write"
       SID		      "375"
-      Type		      "LIBRARY_BLOCK"
-    }
-    ExternalFileReference {
-      Reference		      "simulink/Discrete/Transfer Fcn\nLead or Lag"
-      Path		      "drunk/Transfer Fcn Lead or Lag"
-      SID		      "414"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
@@ -137,9 +137,9 @@ Model {
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
 	Extents			[1882.0, 791.0]
-	ZoomFactor		[0.94006544077451459]
-	Offset			[-217.09570523193088, -261.7153915520496]
-	SceneRectInView		[-217.09570523193088, -261.7153915520496, 2001.9882854638618, 841.43078310409919]
+	ZoomFactor		[0.78819723530466779]
+	Offset			[-349.96517664509179, -342.77795897384038]
+	SceneRectInView		[-349.96517664509179, -342.77795897384038, 2387.7272282901836, 1003.5559179476808]
       }
       Array {
 	Type			"Simulink.DockComponentInfo"
@@ -197,9 +197,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Rohan"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Jul 13 14:43:07 2022"
-  RTWModifiedTimeStamp	  579621662
-  ModelVersionFormat	  "%<AutoIncrement:9.22>"
+  LastModifiedDate	  "Wed Jul 13 15:42:35 2022"
+  RTWModifiedTimeStamp	  579627752
+  ModelVersionFormat	  "%<AutoIncrement:9.39>"
   SampleTimeColors	  on
   SampleTimeAnnotations	  on
   LibraryLinkDisplay	  "none"
@@ -923,7 +923,7 @@ Model {
 	      Version		      "21.0.0"
 	      Array {
 		Type			"Cell"
-		Dimension		17
+		Dimension		18
 		Cell			"IncludeMdlTerminateFcn"
 		Cell			"SuppressErrorStatus"
 		Cell			"ERTCustomFileBanners"
@@ -941,6 +941,7 @@ Model {
 		Cell			"RemoveResetFunc"
 		Cell			"ConcurrentExecutionCompliant"
 		Cell			"PreserveStateflowLocalDataDimensions"
+		Cell			"CombineOutputUpdateFcns"
 		PropName		"DisabledProps"
 	      }
 	      Description	      ""
@@ -1013,7 +1014,7 @@ Model {
 		  Version		  "21.0.0"
 		  Array {
 		    Type		    "Cell"
-		    Dimension		    16
+		    Dimension		    17
 		    Cell		    "IncludeMdlTerminateFcn"
 		    Cell		    "SuppressErrorStatus"
 		    Cell		    "ERTCustomFileBanners"
@@ -1030,6 +1031,7 @@ Model {
 		    Cell		    "RemoveDisableFunc"
 		    Cell		    "RemoveResetFunc"
 		    Cell		    "ConcurrentExecutionCompliant"
+		    Cell		    "CombineOutputUpdateFcns"
 		    PropName		    "DisabledProps"
 		  }
 		  Description		  ""
@@ -1222,7 +1224,7 @@ Model {
       Name		      "Configuration"
       CurrentDlgPage	      "Code Generation/Interface"
       ConfigPrmDlgPosition    [ 71, 71, 1011, 781 ]
-      ExtraOptions	      ""
+      ExtraOptions	      "-aBlockCommentType=\"BlockPathComment\" -aIgnoreTestpoints=0 "
     }
     PropName		    "ConfigurationSets"
   }
@@ -1551,16 +1553,16 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "94"
+    ZoomFactor		    "79"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "414"
+    SIDHighWatermark	    "424"
     SimulinkSubDomain	    "Simulink"
     Block {
       BlockType		      Sum
       Name		      "Add"
       SID		      "239"
       Ports		      [2, 1]
-      Position		      [375, 135, 400, 215]
+      Position		      [245, 135, 270, 215]
       ZOrder		      -2
       ShowName		      off
       IconShape		      "rectangular"
@@ -1570,7 +1572,7 @@ Model {
       Name		      "Add1"
       SID		      "240"
       Ports		      [2, 1]
-      Position		      [375, 217, 400, 293]
+      Position		      [245, 217, 270, 293]
       ZOrder		      -2
       ShowName		      off
       IconShape		      "rectangular"
@@ -1580,7 +1582,7 @@ Model {
       Name		      "Add2"
       SID		      "412"
       Ports		      [2, 1]
-      Position		      [670, 152, 700, 183]
+      Position		      [910, 152, 940, 183]
       ZOrder		      403
       IconShape		      "rectangular"
     }
@@ -1588,7 +1590,7 @@ Model {
       BlockType		      DataTypeConversion
       Name		      "Data Type Conversion"
       SID		      "241"
-      Position		      [-25, 205, 15, 225]
+      Position		      [-155, 205, -115, 225]
       ZOrder		      -5
       ShowName		      off
       RndMeth		      "Floor"
@@ -1599,7 +1601,7 @@ Model {
       Name		      "Demux"
       SID		      "242"
       Ports		      [1, 4]
-      Position		      [260, 138, 265, 292]
+      Position		      [130, 138, 135, 292]
       ZOrder		      -6
       ShowName		      off
     }
@@ -1608,7 +1610,7 @@ Model {
       Name		      "Display1"
       SID		      "243"
       Ports		      [1]
-      Position		      [1285, 250, 1350, 270]
+      Position		      [1535, 250, 1600, 270]
       ZOrder		      -9
       ShowName		      off
     }
@@ -1617,7 +1619,7 @@ Model {
       Name		      "Display10"
       SID		      "244"
       Ports		      [1]
-      Position		      [1705, 295, 1770, 315]
+      Position		      [1955, 295, 2020, 315]
       ZOrder		      -10
       BackgroundColor	      "lightBlue"
       ShowName		      off
@@ -1627,7 +1629,7 @@ Model {
       Name		      "Display2"
       SID		      "347"
       Ports		      [1]
-      Position		      [1285, 310, 1350, 330]
+      Position		      [1535, 310, 1600, 330]
       ZOrder		      -11
       ShowName		      off
     }
@@ -1645,7 +1647,7 @@ Model {
       Name		      "Encoder_to_Velocity1"
       SID		      "248"
       Ports		      [1, 1]
-      Position		      [1280, 120, 1355, 160]
+      Position		      [1530, 120, 1605, 160]
       ZOrder		      -13
       ShowName		      off
       RequestExecContextInheritance off
@@ -1860,7 +1862,7 @@ Model {
       Name		      "Encoder_to_Velocity2"
       SID		      "260"
       Ports		      [1, 1]
-      Position		      [1280, 180, 1355, 220]
+      Position		      [1530, 180, 1605, 220]
       ZOrder		      -14
       ShowName		      off
       RequestExecContextInheritance off
@@ -2074,7 +2076,7 @@ Model {
       BlockType		      Gain
       Name		      "Gain1"
       SID		      "272"
-      Position		      [450, 236, 490, 274]
+      Position		      [320, 236, 360, 274]
       ZOrder		      -16
       ShowName		      off
       Gain		      "2"
@@ -2083,7 +2085,7 @@ Model {
       BlockType		      Gain
       Name		      "Gain2"
       SID		      "273"
-      Position		      [300, 136, 340, 174]
+      Position		      [170, 136, 210, 174]
       ZOrder		      -17
       ShowName		      off
       Gain		      ".3"
@@ -2092,7 +2094,7 @@ Model {
       BlockType		      Gain
       Name		      "Gain3"
       SID		      "274"
-      Position		      [450, 156, 490, 194]
+      Position		      [320, 156, 360, 194]
       ZOrder		      -18
       ShowName		      off
       Gain		      "0.6"
@@ -2101,7 +2103,7 @@ Model {
       BlockType		      Gain
       Name		      "Gain4"
       SID		      "275"
-      Position		      [300, 256, 340, 294]
+      Position		      [170, 256, 210, 294]
       ZOrder		      -19
       ShowName		      off
       Gain		      "-.3"
@@ -2110,7 +2112,7 @@ Model {
       BlockType		      Gain
       Name		      "Gain5"
       SID		      "276"
-      Position		      [300, 176, 340, 214]
+      Position		      [170, 176, 210, 214]
       ZOrder		      -20
       ShowName		      off
       Gain		      "-.3"
@@ -2119,7 +2121,7 @@ Model {
       BlockType		      Gain
       Name		      "Gain6"
       SID		      "277"
-      Position		      [300, 216, 340, 254]
+      Position		      [170, 216, 210, 254]
       ZOrder		      -21
       ShowName		      off
       Gain		      ".3"
@@ -2129,7 +2131,7 @@ Model {
       Name		      "HIL Initialize"
       SID		      "1"
       Ports		      []
-      Position		      [1555, -61, 1639, 14]
+      Position		      [1805, -61, 1889, 14]
       ZOrder		      -22
       Priority		      "-99"
       AttributesFormatString  "%<object_name> (%<board_type>-%<board_number>)"
@@ -2251,7 +2253,7 @@ Model {
       Name		      "Host Keyboard"
       SID		      "278"
       Ports		      [0, 2]
-      Position		      [-180, 88, -50, 257]
+      Position		      [-310, 88, -180, 257]
       ZOrder		      -24
       LibraryVersion	      "1.2097"
       SourceBlock	      "quarc_library/Devices/Peripherals/Host/Host Keyboard"
@@ -2265,11 +2267,36 @@ Model {
       debug_mode	      off
     }
     Block {
+      BlockType		      Reference
+      Name		      "Lowpass Filter"
+      SID		      "416"
+      Ports		      [1, 1]
+      Position		      [540, 159, 595, 191]
+      ZOrder		      407
+      LibraryVersion	      "5.9"
+      SourceBlock	      "dspfdesign/Lowpass Filter"
+      SourceType	      "dsp.LowpassFilter"
+      SourceProductBaseCode   "DS"
+      FilterType	      "FIR"
+      DesignForMinimumOrder   on
+      FilterOrder	      "50"
+      PassbandFrequency	      "8e3"
+      StopbandFrequency	      "12e3"
+      PassbandRipple	      "0.1"
+      StopbandAttenuation     "80"
+      InheritSampleRate	      off
+      SampleRate	      "44100"
+      SimulateUsing	      "Interpreted execution"
+      roundingMode	      "Floor"
+      coeffsDataTypeStr	      "fixdt(1,16)"
+      LockScale		      off
+    }
+    Block {
       BlockType		      SubSystem
       Name		      "QBot 2e Basic Motor Commands\nand Sensor Measurement"
       SID		      "363"
       Ports		      [2, 4]
-      Position		      [1040, 109, 1235, 351]
+      Position		      [1290, 109, 1485, 351]
       ZOrder		      256
       RequestExecContextInheritance off
       System {
@@ -2751,7 +2778,7 @@ Model {
       Name		      "QBot 2e Full Kinematics (No Gyro)"
       SID		      "305"
       Ports		      [2, 8]
-      Position		      [1400, 94, 1580, 281]
+      Position		      [1650, 94, 1830, 281]
       ZOrder		      -29
       RequestExecContextInheritance off
       System {
@@ -3557,7 +3584,7 @@ Model {
       "locity)"
       SID		      "333"
       Ports		      [2, 2]
-      Position		      [760, 128, 955, 297]
+      Position		      [1010, 128, 1205, 297]
       ZOrder		      -30
       RequestExecContextInheritance off
       System {
@@ -3794,7 +3821,7 @@ Model {
       BlockType		      RandomNumber
       Name		      "Random\nNumber"
       SID		      "405"
-      Position		      [440, -5, 470, 25]
+      Position		      [680, 75, 710, 105]
       ZOrder		      399
       ForegroundColor	      "green"
       Variance		      ".01"
@@ -3804,14 +3831,21 @@ Model {
       BlockType		      RateTransition
       Name		      "Rate Transition"
       SID		      "411"
-      Position		      [510, -11, 550, 31]
+      Position		      [750, 69, 790, 111]
       ZOrder		      402
+    }
+    Block {
+      BlockType		      RateTransition
+      Name		      "Rate Transition1"
+      SID		      "417"
+      Position		      [440, 154, 480, 196]
+      ZOrder		      408
     }
     Block {
       BlockType		      Saturate
       Name		      "Saturation"
       SID		      "406"
-      Position		      [585, -5, 615, 25]
+      Position		      [825, 75, 855, 105]
       ZOrder		      401
       UpperLimit	      "0.1"
       LowerLimit	      "0"
@@ -3821,25 +3855,25 @@ Model {
       Name		      "Scope"
       SID		      "413"
       Ports		      [1]
-      Position		      [1205, 4, 1235, 36]
+      Position		      [1455, 4, 1485, 36]
       ZOrder		      404
       ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
       "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
       "ources','WiredSimulink',true,'DataLoggingVariableName','ScopeData1'),extmgr.Configuration('Visuals','Time Domain"
-      "',true,'SerializedDisplays',{struct('MinYLimReal','-0.87225','MaxYLimReal','0.89534','YLabelReal','','MinYLimMag"
-      "','0.00000','MaxYLimMag','0.89534','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'Axes"
-      "Color',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.06666"
-      "66666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.8313"
-      "72549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686"
-      " 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines"
-      "',1,'LineNames',{{'QBot 2e Full Kinematics (No Gyro)/vC'}},'ShowContent',true,'Placement',1)},'DisplayPropertyDe"
-      "faults',struct('MinYLimReal','-0.87225','MaxYLimReal','0.89534','YLabelReal','','MinYLimMag','0.00000','MaxYLimM"
-      "ag','0.89534','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesT"
-      "ickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[0.0745098039215686 0.62352941176"
-      "4706 1;1 0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0.274509803921569 1;0.39215"
-      "6862745098 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863]))"
-      ",extmgr.Configuration('Tools','Plot Navigation',true),extmgr.Configuration('Tools','Measurements',true,'Version'"
-      ",'2021a')),'Version','2021a')"
+      "',true,'SerializedDisplays',{struct('MinYLimReal','-0.00806','MaxYLimReal','0.0725','YLabelReal','','MinYLimMag'"
+      ",'0.00000','MaxYLimMag','0.0725','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesCo"
+      "lor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666"
+      "666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372"
+      "549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0"
+      ".650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',"
+      "1,'LineNames',{{'QBot 2e Full Kinematics (No Gyro)/vC'}},'ShowContent',true,'Placement',1)},'DisplayPropertyDefa"
+      "ults',struct('MinYLimReal','-0.00806','MaxYLimReal','0.0725','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag'"
+      ",'0.0725','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickC"
+      "olor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[0.0745098039215686 0.623529411764706"
+      " 1;1 0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0.274509803921569 1;0.392156862"
+      "745098 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863])),ext"
+      "mgr.Configuration('Tools','Plot Navigation',true),extmgr.Configuration('Tools','Measurements',true,'Version','20"
+      "21a')),'Version','2021a')"
       NumInputPorts	      "1"
       Floating		      off
     }
@@ -3848,7 +3882,7 @@ Model {
       Name		      "Scope1"
       SID		      "407"
       Ports		      [1]
-      Position		      [690, 54, 720, 86]
+      Position		      [930, 54, 960, 86]
       ZOrder		      400
       ForegroundColor	      "green"
       ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
@@ -3874,7 +3908,7 @@ Model {
       BlockType		      Terminator
       Name		      "Terminator1"
       SID		      "344"
-      Position		      [1660, 95, 1670, 105]
+      Position		      [1910, 95, 1920, 105]
       ZOrder		      9
       ShowName		      off
     }
@@ -3882,7 +3916,7 @@ Model {
       BlockType		      Terminator
       Name		      "Terminator10"
       SID		      "339"
-      Position		      [1660, 170, 1670, 180]
+      Position		      [1910, 170, 1920, 180]
       ZOrder		      11
       ShowName		      off
     }
@@ -3890,7 +3924,7 @@ Model {
       BlockType		      Terminator
       Name		      "Terminator11"
       SID		      "340"
-      Position		      [1660, 195, 1670, 205]
+      Position		      [1910, 195, 1920, 205]
       ZOrder		      12
       ShowName		      off
     }
@@ -3906,7 +3940,7 @@ Model {
       BlockType		      Terminator
       Name		      "Terminator2"
       SID		      "345"
-      Position		      [-30, 125, -20, 135]
+      Position		      [-160, 125, -150, 135]
       ZOrder		      9
       ShowName		      off
     }
@@ -3914,7 +3948,7 @@ Model {
       BlockType		      Terminator
       Name		      "Terminator8"
       SID		      "341"
-      Position		      [1660, 120, 1670, 130]
+      Position		      [1910, 120, 1920, 130]
       ZOrder		      9
       ShowName		      off
     }
@@ -3922,40 +3956,16 @@ Model {
       BlockType		      Terminator
       Name		      "Terminator9"
       SID		      "342"
-      Position		      [1660, 145, 1670, 155]
+      Position		      [1910, 145, 1920, 155]
       ZOrder		      10
       ShowName		      off
-    }
-    Block {
-      BlockType		      Reference
-      Name		      "Transfer Fcn\nLead or Lag"
-      SID		      "414"
-      Ports		      [1, 1]
-      Position		      [540, 157, 600, 193]
-      ZOrder		      405
-      LibraryVersion	      "1.480"
-      SourceBlock	      "simulink/Discrete/Transfer Fcn\nLead or Lag"
-      SourceType	      "Lead or Lag Compensator"
-      SourceProductBaseCode   "SL"
-      RTWMemSecFuncInitTerm   "Inherit from model"
-      RTWMemSecFuncExecute    "Inherit from model"
-      RTWMemSecDataConstants  "Inherit from model"
-      RTWMemSecDataInternal   "Inherit from model"
-      RTWMemSecDataParameters "Inherit from model"
-      ContentPreviewEnabled   on
-      PoleZ		      "0.95"
-      ZeroZ		      "0.75"
-      ICPrevOutput	      "0.0"
-      ICPrevInput	      "0.0"
-      RndMeth		      "Floor"
-      DoSatur		      off
     }
     Block {
       BlockType		      TransportDelay
       Name		      "Transport\nDelay"
       SID		      "403"
       Ports		      [1, 1]
-      Position		      [65, 195, 105, 235]
+      Position		      [-25, 195, 15, 235]
       ZOrder		      387
       DelayTime		      ".12"
     }
@@ -3964,7 +3974,7 @@ Model {
       Name		      "XY Figure"
       SID		      "343"
       Ports		      [2]
-      Position		      [1715, 212, 1760, 263]
+      Position		      [1965, 212, 2010, 263]
       ZOrder		      -47
       BackgroundColor	      "lightBlue"
       LibraryVersion	      "1.2097"
@@ -4053,10 +4063,10 @@ Model {
       DstPort		      1
     }
     Line {
-      ZOrder		      264
+      ZOrder		      272
       SrcBlock		      "Gain3"
       SrcPort		      1
-      DstBlock		      "Transfer Fcn\nLead or Lag"
+      DstBlock		      "Rate Transition1"
       DstPort		      1
     }
     Line {
@@ -4145,7 +4155,7 @@ Model {
       DstPort		      1
     }
     Line {
-      ZOrder		      228
+      ZOrder		      284
       SrcBlock		      "Data Type Conversion"
       SrcPort		      1
       DstBlock		      "Transport\nDelay"
@@ -4235,7 +4245,7 @@ Model {
       DstPort		      1
     }
     Line {
-      ZOrder		      229
+      ZOrder		      280
       SrcBlock		      "Transport\nDelay"
       SrcPort		      1
       DstBlock		      "Demux"
@@ -4252,15 +4262,16 @@ Model {
       ZOrder		      235
       SrcBlock		      "Saturation"
       SrcPort		      1
-      Points		      [20, 0; 0, 60]
+      Points		      [20, 0]
       Branch {
-	ZOrder			266
-	Points			[0, 90]
+	ZOrder			290
+	Points			[0, 70]
 	DstBlock		"Add2"
 	DstPort			1
       }
       Branch {
-	ZOrder			233
+	ZOrder			289
+	Points			[0, -20]
 	DstBlock		"Scope1"
 	DstPort			1
       }
@@ -4281,16 +4292,32 @@ Model {
       DstPort		      1
     }
     Line {
-      ZOrder		      269
-      SrcBlock		      "Transfer Fcn\nLead or Lag"
+      ZOrder		      271
+      SrcBlock		      "Lowpass Filter"
       SrcPort		      1
       DstBlock		      "Add2"
       DstPort		      2
     }
+    Line {
+      ZOrder		      273
+      SrcBlock		      "Rate Transition1"
+      SrcPort		      1
+      Points		      [-125, 0]
+      DstBlock		      "Lowpass Filter"
+      DstPort		      1
+    }
+    Annotation {
+      SID		      "419"
+      Name		      "decline in ability to perform two tasks as the same time (lambda = 2)"
+      Position		      [366, 207, 668, 221]
+      InternalMargins	      [0, 0, 0, 0]
+      HorizontalAlignment     "left"
+      VerticalAlignment	      "top"
+    }
     Annotation {
       SID		      "346"
       Name		      "Vc: Up(+), Down(-)\nOmega: Left (+), Right(-)"
-      Position		      [-202, 275, -40, 309]
+      Position		      [-332, 275, -170, 309]
       InternalMargins	      [0, 0, 0, 0]
       ZOrder		      -2
       FontName		      "Arial"
@@ -4300,7 +4327,7 @@ Model {
     Annotation {
       SID		      "408"
       Name		      "decline in visual function"
-      Position		      [500, 41, 610, 55]
+      Position		      [740, 121, 850, 135]
       InternalMargins	      [0, 0, 0, 0]
       HorizontalAlignment     "left"
       VerticalAlignment	      "top"
@@ -4309,7 +4336,7 @@ Model {
     Annotation {
       SID		      "409"
       Name		      "reduced coordination"
-      Position		      [507, 63, 602, 77]
+      Position		      [747, 135, 842, 149]
       InternalMargins	      [0, 0, 0, 0]
       HorizontalAlignment     "left"
       VerticalAlignment	      "top"
@@ -4323,12 +4350,21 @@ Model {
       "yle:normal;\">\n<p align=\"left\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px;"
       " -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:10px; color:#000000;\">reduced ability to track"
       " moving objects</span></p></body></html>"
-      Position		      [19, 252, 190, 266]
+      Position		      [-91, 252, 80, 266]
       InternalMargins	      [0, 0, 0, 0]
       HorizontalAlignment     "left"
       VerticalAlignment	      "top"
       Interpreter	      "rich"
       ZOrder		      -3
+    }
+    Annotation {
+      SID		      "422"
+      Name		      "reduced response to emergencies (lambda = 3)"
+      Position		      [409, 222, 620, 236]
+      InternalMargins	      [0, 0, 0, 0]
+      HorizontalAlignment     "left"
+      VerticalAlignment	      "top"
+      ZOrder		      -2
     }
   }
 }
