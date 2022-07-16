@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "9.66"
+    ComputedModelVersion    "9.70"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -110,7 +110,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [952.0, -8.0, 976.0, 1056.0]
+      Location		      [-8.0, -8.0, 1936.0, 1056.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -136,29 +136,16 @@ Model {
 	IsTabbed		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[922.0, 791.0]
+	Extents			[1882.0, 791.0]
 	ZoomFactor		[0.859446186830459]
 	Offset			[-423.49268473570646, -330.1800625337109]
-	SceneRectInView		[-423.49268473570646, -330.1800625337109, 1072.7838625943905, 920.36012506742179]
+	SceneRectInView		[-423.49268473570646, -330.1800625337109, 2189.7822444714129, 920.36012506742179]
       }
       Array {
 	Type			"Simulink.DockComponentInfo"
 	Dimension		2
 	Object {
 	  $ObjectID		  6
-	  Type			  "Simulink:Editor:ReferencedFiles"
-	  ID			  "Referenced Files"
-	  Visible		  [0]
-	  CreateCallback	  ""
-	  UserData		  "{\"filterShowRefModels\":\"true\",\"filterShowRefSubs\":\"true\",\"filterShowOnlyDirtyFiles\":\"false\"}\n"
-	  Floating		  [0]
-	  DockPosition		  "Left"
-	  Width			  [640]
-	  Height		  [480]
-	  Minimized		  "Unset"
-	}
-	Object {
-	  $ObjectID		  7
 	  Type			  "GLUE2:PropertyInspector"
 	  ID			  "Property Inspector"
 	  Visible		  [0]
@@ -170,6 +157,19 @@ Model {
 	  Height		  [480]
 	  Minimized		  "Unset"
 	}
+	Object {
+	  $ObjectID		  7
+	  Type			  "Simulink:Editor:ReferencedFiles"
+	  ID			  "Referenced Files"
+	  Visible		  [0]
+	  CreateCallback	  ""
+	  UserData		  "{\"filterShowRefModels\":\"true\",\"filterShowRefSubs\":\"true\",\"filterShowOnlyDirtyFiles\":\"false\"}\n"
+	  Floating		  [0]
+	  DockPosition		  "Left"
+	  Width			  [640]
+	  Height		  [480]
+	  Minimized		  "Unset"
+	}
 	PropName		"DockComponentsInfo"
       }
       WindowState	      "AAAA/wAAAAD9AAAAAgAAAAAAAAC9AAAB+PwCAAAABPsAAAAWAEQAbwBjAGsAVwBpAGQAZwBlAHQAMwEAAAAxAAAB+AAAA"
@@ -177,7 +177,7 @@ Model {
       "ABvAG4AZQBuAHQALwBHAEwAVQBFADIAIAB0AHIAZQBlACAAYwBvAG0AcABvAG4AZQBuAHQAAAAAAP////8AAABjAP////sAAABgAFMAaQBtAHUAb"
       "ABpAG4AawA6AEUAZABpAHQAbwByADoAUgBlAGYAZQByAGUAbgBjAGUAZABGAGkAbABlAHMALwBSAGUAZgBlAHIAZQBuAGMAZQBkACAARgBpAGwAZ"
       "QBzAAAAAAD/////AAAAjAD///8AAAABAAAAAAAAAAD8AgAAAAH7AAAAVABHAEwAVQBFADIAOgBQAHIAbwBwAGUAcgB0AHkASQBuAHMAcABlAGMAd"
-      "ABvAHIALwBQAHIAbwBwAGUAcgB0AHkAIABJAG4AcwBwAGUAYwB0AG8AcgAAAAAA/////wAAAawA////AAADwAAAA1QAAAABAAAAAgAAAAEAAAAC/"
+      "ABvAHIALwBQAHIAbwBwAGUAcgB0AHkAIABJAG4AcwBwAGUAYwB0AG8AcgAAAAAA/////wAAAawA////AAAHgAAAA1QAAAABAAAAAgAAAAEAAAAC/"
       "AAAAAEAAAACAAAAAf////8BAAAAAP////8AAAAAAAAAAA=="
       Array {
 	Type			"Cell"
@@ -197,9 +197,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Rohan"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Jul 14 17:55:54 2022"
-  RTWModifiedTimeStamp	  579722153
-  ModelVersionFormat	  "%<AutoIncrement:9.66>"
+  LastModifiedDate	  "Sat Jul 16 14:46:21 2022"
+  RTWModifiedTimeStamp	  579883564
+  ModelVersionFormat	  "%<AutoIncrement:9.70>"
   SampleTimeColors	  on
   SampleTimeAnnotations	  on
   LibraryLinkDisplay	  "none"
@@ -324,7 +324,7 @@ Model {
 	  Description		  ""
 	  Components		  []
 	  StartTime		  "0.0"
-	  StopTime		  "inf"
+	  StopTime		  "10"
 	  AbsTol		  "auto"
 	  AutoScaleAbsTol	  on
 	  FixedStep		  "0.01"
@@ -1505,7 +1505,7 @@ Model {
   }
   System {
     Name		    "cell_phone"
-    Location		    [952, -8, 1928, 1048]
+    Location		    [-8, -8, 1928, 1048]
     SystemRect		    [0.000000, 0.000000, 0.000000, 0.000000]
     Open		    on
     PortBlocksUseCompactNotation off
@@ -1523,7 +1523,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "86"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "432"
+    SIDHighWatermark	    "434"
     SimulinkSubDomain	    "Simulink"
     Block {
       BlockType		      Sum
@@ -1549,7 +1549,7 @@ Model {
       BlockType		      DataTypeConversion
       Name		      "Data Type Conversion"
       SID		      "241"
-      Position		      [-195, 205, -155, 225]
+      Position		      [-220, 205, -180, 225]
       ZOrder		      -5
       ShowName		      off
       RndMeth		      "Floor"
@@ -1560,7 +1560,7 @@ Model {
       Name		      "Demux"
       SID		      "242"
       Ports		      [1, 4]
-      Position		      [260, 138, 265, 292]
+      Position		      [80, 138, 85, 292]
       ZOrder		      -6
       ShowName		      off
     }
@@ -2033,6 +2033,14 @@ Model {
     }
     Block {
       BlockType		      Gain
+      Name		      "Gain"
+      SID		      "433"
+      Position		      [-125, 200, -95, 230]
+      ZOrder		      413
+      Gain		      "1.15"
+    }
+    Block {
+      BlockType		      Gain
       Name		      "Gain1"
       SID		      "272"
       Position		      [450, 236, 490, 274]
@@ -2044,7 +2052,7 @@ Model {
       BlockType		      Gain
       Name		      "Gain2"
       SID		      "273"
-      Position		      [300, 136, 340, 174]
+      Position		      [120, 136, 160, 174]
       ZOrder		      -17
       ShowName		      off
       Gain		      ".3"
@@ -2062,7 +2070,7 @@ Model {
       BlockType		      Gain
       Name		      "Gain4"
       SID		      "275"
-      Position		      [300, 256, 340, 294]
+      Position		      [120, 256, 160, 294]
       ZOrder		      -19
       ShowName		      off
       Gain		      "-.3"
@@ -2071,7 +2079,7 @@ Model {
       BlockType		      Gain
       Name		      "Gain5"
       SID		      "276"
-      Position		      [300, 176, 340, 214]
+      Position		      [120, 176, 160, 214]
       ZOrder		      -20
       ShowName		      off
       Gain		      "-.3"
@@ -2080,7 +2088,7 @@ Model {
       BlockType		      Gain
       Name		      "Gain6"
       SID		      "277"
-      Position		      [300, 216, 340, 254]
+      Position		      [120, 216, 160, 254]
       ZOrder		      -21
       ShowName		      off
       Gain		      ".3"
@@ -3953,14 +3961,14 @@ Model {
       ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
       "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
       "ources','WiredSimulink',true),extmgr.Configuration('Visuals','Time Domain',true,'SerializedDisplays',{struct('Mi"
-      "nYLimReal','-0.02476','MaxYLimReal','0.22281','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','0.22281','Leg"
+      "nYLimReal','-0.28519','MaxYLimReal','0.28435','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','0.28519','Leg"
       "endVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.68627"
       "4509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623529"
       "411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647"
       "058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLa"
       "bel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',2,'LineNames',{{'Gain3','QBot 2e Full"
       " Kinematics (No Gyro)/vC'}},'ShowContent',true,'Placement',1)},'DisplayPropertyDefaults',struct('MinYLimReal','-"
-      "0.02476','MaxYLimReal','0.22281','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','0.22281','LegendVisibility"
+      "0.28519','MaxYLimReal','0.28435','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','0.28519','LegendVisibility"
       "','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0."
       "686274509803922 0.686274509803922],'ColorOrder',[0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16"
       "078431372549;1 1 0.0666666666666667;0.717647058823529 0.274509803921569 1;0.392156862745098 0.831372549019608 0."
@@ -4067,9 +4075,18 @@ Model {
       Name		      "cognitive reaction time (CRT)"
       SID		      "414"
       Ports		      [1, 1]
-      Position		      [-65, 195, -25, 235]
+      Position		      [-40, 195, 0, 235]
       ZOrder		      396
       DelayTime		      ".6-.35"
+    }
+    Block {
+      BlockType		      TransportDelay
+      Name		      "foot movement time (FMT)"
+      SID		      "434"
+      Ports		      [1, 1]
+      Position		      [245, 95, 285, 135]
+      ZOrder		      414
+      DelayTime		      ".3-.25"
     }
     Line {
       ZOrder		      10
@@ -4202,10 +4219,11 @@ Model {
       DstPort		      1
     }
     Line {
-      ZOrder		      31
+      ZOrder		      353
       SrcBlock		      "Gain2"
       SrcPort		      1
-      DstBlock		      "Add"
+      Points		      [20, 0; 0, -40]
+      DstBlock		      "foot movement time (FMT)"
       DstPort		      1
     }
     Line {
@@ -4336,7 +4354,7 @@ Model {
       ZOrder		      242
       SrcBlock		      "Data Type Conversion"
       SrcPort		      1
-      DstBlock		      "cognitive reaction time (CRT)"
+      DstBlock		      "Gain"
       DstPort		      1
     }
     Line {
@@ -4369,6 +4387,21 @@ Model {
       DstBlock		      "Data Type Conversion"
       DstPort		      1
     }
+    Line {
+      ZOrder		      352
+      SrcBlock		      "Gain"
+      SrcPort		      1
+      DstBlock		      "cognitive reaction time (CRT)"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      354
+      SrcBlock		      "foot movement time (FMT)"
+      SrcPort		      1
+      Points		      [65, 0; 0, 40]
+      DstBlock		      "Add"
+      DstPort		      1
+    }
     Annotation {
       SID		      "346"
       Name		      "Vc: Up(+), Down(-)\nOmega: Left (+), Right(-)"
@@ -4393,7 +4426,7 @@ MatData {
     "   !          (  0      #@   +@!   &    \"     (         !0    @    !     0    $         !0 $ !$    !    50   &ES7"
     "W5N:7%U90          ;VQD7V)L;V-K          !O;&1?;F%M90           &ES7VUO9&5L7V-L;W-I;F< :7-?9&5L971E9              "
     ".    ,     8    (    \"0(        %    \"     $    !     0         \"  $  0    X    X    !@    @    &          4   "
-    " (     0    $    !          D    (         \"P 34 .    .     8    (    !          %    \"     $    %     0        "
+    " (     0    $    !          D    (         \"2 34 .    .     8    (    !          %    \"     $    %     0        "
     " 0    !0   $A)3\"TQ    #@   #     &    \"     D\"        !0    @    !     0    $          @ !       .    ,     8  "
     "  (    \"0(        %    \"     $    !     0         \"  $       X    880  !@    @    \"          4    (     0    $"
     "    !          4 !  /     0   #P   !O;&1?8F]A<F1?='EP90!Q.                 !Q8F]T,@            !Q8F]T,F4          "
@@ -4697,7 +4730,7 @@ MatData {
     "-T7VYA;64       X    8 0  !@    @    \"          4    (     0    $    !          4 !  -     0   \"<   !O;&1?;F%M90"
     "      :7-?9&5L971E9    &]B:F5C=%]B;&]C:P  #@   #@    &    \"     0         !0    @    !    !0    $         $     4"
     "   !(24PM,0    X    P    !@    @    ) @        4    (     0    $    !          (  0      #@   #@    &    \"     8 "
-    "        !0    @    !     0    $         \"0    @         + !-0 "
+    "        !0    @    !     0    $         \"0    @         )(!-0 "
   }
   DataRecord {
     Tag			    DataTag2
@@ -4705,7 +4738,7 @@ MatData {
     "-T7VYA;64       X    8 0  !@    @    \"          4    (     0    $    !          4 !  -     0   \"<   !O;&1?;F%M90"
     "      :7-?9&5L971E9    &]B:F5C=%]B;&]C:P  #@   #@    &    \"     0         !0    @    !    !0    $         $     4"
     "   !(24PM,0    X    P    !@    @    ) @        4    (     0    $    !          (  0      #@   #@    &    \"     8 "
-    "        !0    @    !     0    $         \"0    @         + !-0 "
+    "        !0    @    !     0    $         \"0    @         )(!-0 "
   }
 }
 #Finite State Machines
