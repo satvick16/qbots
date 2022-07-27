@@ -1,13 +1,13 @@
 Model {
-  Name			  "cell_phone"
+  Name			  "teleop_arrows"
   Version		  10.3
   SavedCharacterEncoding  "windows-1252"
-  ModelUUID		  "bc2a567f-5406-4ab2-b0e4-f9aed7b65ec0"
+  ModelUUID		  "982abde3-188f-41a2-bfde-dffe18bb7403"
   GraphicalInterface {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "9.77"
+    ComputedModelVersion    "9.6"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -19,64 +19,58 @@ Model {
     IsExportFunctionModel   0
     SimulinkSubDomainType   "Simulink"
     NumParameterArguments   0
-    NumExternalFileReferences 10
+    NumExternalFileReferences 9
     ExternalFileReference {
       Reference		      "quarc_library/Continuous/Second-Order\nLow-Pass Filter"
-      Path		      "cell_phone/Encoder_to_Velocity1/Second-Order Low-Pass Filter2"
+      Path		      "teleop_arrows/Encoder_to_Velocity1/Second-Order Low-Pass Filter2"
       SID		      "257"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "quarc_library/Continuous/Second-Order\nLow-Pass Filter"
-      Path		      "cell_phone/Encoder_to_Velocity2/Second-Order Low-Pass Filter2"
+      Path		      "teleop_arrows/Encoder_to_Velocity2/Second-Order Low-Pass Filter2"
       SID		      "269"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "quarc_library/Data Acquisition/Generic/Configuration/HIL Initialize"
-      Path		      "cell_phone/HIL Initialize"
+      Path		      "teleop_arrows/HIL Initialize"
       SID		      "1"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "quarc_library/Devices/Peripherals/Host/Host Initialize"
-      Path		      "cell_phone/Host Initialize"
+      Path		      "teleop_arrows/Host Initialize"
       SID		      "236"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "quarc_library/Devices/Peripherals/Host/Host Keyboard"
-      Path		      "cell_phone/Host Keyboard"
+      Path		      "teleop_arrows/Host Keyboard"
       SID		      "278"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
-      Reference		      "pid_lib/PID Controller"
-      Path		      "cell_phone/PID Controller"
-      SID		      "430"
-      Type		      "LIBRARY_BLOCK"
-    }
-    ExternalFileReference {
       Reference		      "quarc_library/Discrete/Bias Removal"
-      Path		      "cell_phone/QBot 2e Basic Motor Commands and Sensor Measurement/Bias Removal"
+      Path		      "teleop_arrows/QBot 2e Basic Motor Commands and Sensor Measurement/Bias Removal"
       SID		      "366"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "quarc_library/Data Acquisition/Generic/Immediate I//O/HIL Read"
-      Path		      "cell_phone/QBot 2e Basic Motor Commands and Sensor Measurement/QBot2e_IO_Basic/HIL Read1"
+      Path		      "teleop_arrows/QBot 2e Basic Motor Commands and Sensor Measurement/QBot2e_IO_Basic/HIL Read1"
       SID		      "374"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "quarc_library/Data Acquisition/Generic/Immediate I//O/HIL Write"
-      Path		      "cell_phone/QBot 2e Basic Motor Commands and Sensor Measurement/QBot2e_IO_Basic/HIL Write"
+      Path		      "teleop_arrows/QBot 2e Basic Motor Commands and Sensor Measurement/QBot2e_IO_Basic/HIL Write"
       SID		      "375"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "quarc_library/Sinks/Figures/XY Figure"
-      Path		      "cell_phone/XY Figure"
+      Path		      "teleop_arrows/XY Figure"
       SID		      "343"
       Type		      "LIBRARY_BLOCK"
     }
@@ -137,9 +131,9 @@ Model {
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
 	Extents			[1882.0, 791.0]
-	ZoomFactor		[0.859446186830459]
-	Offset			[-423.49268473570646, -330.1800625337109]
-	SceneRectInView		[-423.49268473570646, -330.1800625337109, 2189.7822444714129, 920.36012506742179]
+	ZoomFactor		[1.2593370904575414]
+	Offset			[-8.3200849514562378, -152.55411862864077]
+	SceneRectInView		[-8.3200849514562378, -152.55411862864077, 1494.4370449029125, 628.10823725728153]
       }
       Array {
 	Type			"Simulink.DockComponentInfo"
@@ -184,9 +178,9 @@ Model {
 	Dimension		0
 	PropName		"PersistedApps"
       }
-      WindowUuid	      "566e6b3b-0e5d-474f-b2f4-27c08449da59"
+      WindowUuid	      "e223a28b-2cc9-4580-b41d-456e4ed20c20"
     }
-    BDUuid		    "561a7488-babb-4899-9de2-4b4fb7e7ce4f"
+    BDUuid		    "e1cf0c67-3f1a-4b87-afe0-cf23c3e28fbe"
   }
   HideAutomaticNames	  on
   SequenceViewerTimePrecision 3
@@ -197,9 +191,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Rohan"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Jul 27 10:25:18 2022"
-  RTWModifiedTimeStamp	  580818316
-  ModelVersionFormat	  "%<AutoIncrement:9.77>"
+  LastModifiedDate	  "Sat Jul 16 16:27:36 2022"
+  RTWModifiedTimeStamp	  579889654
+  ModelVersionFormat	  "%<AutoIncrement:9.6>"
   SampleTimeColors	  on
   SampleTimeAnnotations	  on
   LibraryLinkDisplay	  "none"
@@ -259,13 +253,13 @@ Model {
     $PropName		    "DataLoggingOverride"
     $ObjectID		    8
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
-    model_		    "cell_phone"
+    model_		    "teleop_arrows"
     signals_		    []
     overrideMode_	    [0.0]
     Array {
       Type		      "Cell"
       Dimension		      1
-      Cell		      "cell_phone"
+      Cell		      "teleop_arrows"
       PropName		      "logAsSpecifiedByModels_"
     }
     Array {
@@ -1431,10 +1425,6 @@ Model {
       MultithreadedSim	      "auto"
     }
     Block {
-      BlockType		      Scope
-      DefaultConfigurationName "Simulink.scopes.TimeScopeBlockCfg"
-    }
-    Block {
       BlockType		      SubSystem
       ShowPortLabels	      "FromPortIcon"
       Permissions	      "ReadWrite"
@@ -1493,18 +1483,9 @@ Model {
     Block {
       BlockType		      Terminator
     }
-    Block {
-      BlockType		      TransportDelay
-      DelayTime		      "1"
-      InitialOutput	      "0"
-      BufferSize	      "1024"
-      FixedBuffer	      off
-      TransDelayFeedthrough   off
-      PadeOrder		      "0"
-    }
   }
   System {
-    Name		    "cell_phone"
+    Name		    "teleop_arrows"
     Location		    [-8, -8, 1928, 1048]
     SystemRect		    [0.000000, 0.000000, 0.000000, 0.000000]
     Open		    on
@@ -1521,9 +1502,9 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "86"
+    ZoomFactor		    "126"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "435"
+    SIDHighWatermark	    "402"
     SimulinkSubDomain	    "Simulink"
     Block {
       BlockType		      Sum
@@ -1549,7 +1530,7 @@ Model {
       BlockType		      DataTypeConversion
       Name		      "Data Type Conversion"
       SID		      "241"
-      Position		      [-220, 205, -180, 225]
+      Position		      [180, 205, 220, 225]
       ZOrder		      -5
       ShowName		      off
       RndMeth		      "Floor"
@@ -1560,7 +1541,7 @@ Model {
       Name		      "Demux"
       SID		      "242"
       Ports		      [1, 4]
-      Position		      [80, 138, 85, 292]
+      Position		      [260, 138, 265, 292]
       ZOrder		      -6
       ShowName		      off
     }
@@ -1569,7 +1550,7 @@ Model {
       Name		      "Display1"
       SID		      "243"
       Ports		      [1]
-      Position		      [1330, 255, 1395, 275]
+      Position		      [1055, 255, 1120, 275]
       ZOrder		      -9
       ShowName		      off
     }
@@ -1578,7 +1559,7 @@ Model {
       Name		      "Display10"
       SID		      "244"
       Ports		      [1]
-      Position		      [1685, 300, 1750, 320]
+      Position		      [1410, 300, 1475, 320]
       ZOrder		      -10
       BackgroundColor	      "lightBlue"
       ShowName		      off
@@ -1588,7 +1569,7 @@ Model {
       Name		      "Display2"
       SID		      "347"
       Ports		      [1]
-      Position		      [1330, 315, 1395, 335]
+      Position		      [1055, 315, 1120, 335]
       ZOrder		      -11
       ShowName		      off
     }
@@ -1597,7 +1578,7 @@ Model {
       Name		      "Display3"
       SID		      "235"
       Ports		      [1]
-      Position		      [885, -60, 950, -40]
+      Position		      [185, 15, 250, 35]
       ZOrder		      -12
       ShowName		      off
     }
@@ -1606,7 +1587,7 @@ Model {
       Name		      "Encoder_to_Velocity1"
       SID		      "248"
       Ports		      [1, 1]
-      Position		      [1325, 125, 1400, 165]
+      Position		      [1050, 125, 1125, 165]
       ZOrder		      -13
       ShowName		      off
       RequestExecContextInheritance off
@@ -1821,7 +1802,7 @@ Model {
       Name		      "Encoder_to_Velocity2"
       SID		      "260"
       Ports		      [1, 1]
-      Position		      [1325, 185, 1400, 225]
+      Position		      [1050, 185, 1125, 225]
       ZOrder		      -14
       ShowName		      off
       RequestExecContextInheritance off
@@ -2033,14 +2014,6 @@ Model {
     }
     Block {
       BlockType		      Gain
-      Name		      "Gain"
-      SID		      "433"
-      Position		      [-125, 200, -95, 230]
-      ZOrder		      413
-      Gain		      "1.15"
-    }
-    Block {
-      BlockType		      Gain
       Name		      "Gain1"
       SID		      "272"
       Position		      [450, 236, 490, 274]
@@ -2052,7 +2025,7 @@ Model {
       BlockType		      Gain
       Name		      "Gain2"
       SID		      "273"
-      Position		      [120, 136, 160, 174]
+      Position		      [300, 136, 340, 174]
       ZOrder		      -17
       ShowName		      off
       Gain		      ".3"
@@ -2070,7 +2043,7 @@ Model {
       BlockType		      Gain
       Name		      "Gain4"
       SID		      "275"
-      Position		      [120, 256, 160, 294]
+      Position		      [300, 256, 340, 294]
       ZOrder		      -19
       ShowName		      off
       Gain		      "-.3"
@@ -2079,7 +2052,7 @@ Model {
       BlockType		      Gain
       Name		      "Gain5"
       SID		      "276"
-      Position		      [120, 176, 160, 214]
+      Position		      [300, 176, 340, 214]
       ZOrder		      -20
       ShowName		      off
       Gain		      "-.3"
@@ -2088,7 +2061,7 @@ Model {
       BlockType		      Gain
       Name		      "Gain6"
       SID		      "277"
-      Position		      [120, 216, 160, 254]
+      Position		      [300, 216, 340, 254]
       ZOrder		      -21
       ShowName		      off
       Gain		      ".3"
@@ -2098,7 +2071,7 @@ Model {
       Name		      "HIL Initialize"
       SID		      "1"
       Ports		      []
-      Position		      [1110, -116, 1194, -41]
+      Position		      [1325, -61, 1409, 14]
       ZOrder		      -22
       Priority		      "-99"
       AttributesFormatString  "%<object_name> (%<board_type>-%<board_number>)"
@@ -2195,7 +2168,7 @@ Model {
       Name		      "Host Initialize"
       SID		      "236"
       Ports		      [0, 2]
-      Position		      [725, -124, 865, -26]
+      Position		      [25, -49, 165, 49]
       ZOrder		      -23
       LibraryVersion	      "1.2097"
       SourceBlock	      "quarc_library/Devices/Peripherals/Host/Host Initialize"
@@ -2220,7 +2193,7 @@ Model {
       Name		      "Host Keyboard"
       SID		      "278"
       Ports		      [0, 2]
-      Position		      [-385, 88, -255, 257]
+      Position		      [25, 88, 155, 257]
       ZOrder		      -24
       LibraryVersion	      "1.2097"
       SourceBlock	      "quarc_library/Devices/Peripherals/Host/Host Keyboard"
@@ -2234,203 +2207,11 @@ Model {
       debug_mode	      off
     }
     Block {
-      BlockType		      Reference
-      Name		      "PID Controller"
-      SID		      "430"
-      Ports		      [1, 1]
-      Position		      [690, 157, 730, 193]
-      ZOrder		      412
-      LibraryVersion	      "2.31"
-      SourceBlock	      "pid_lib/PID Controller"
-      SourceType	      "PID 1dof"
-      SourceProductBaseCode   "SL"
-      RTWMemSecFuncInitTerm   "Inherit from model"
-      RTWMemSecFuncExecute    "Inherit from model"
-      RTWMemSecDataConstants  "Inherit from model"
-      RTWMemSecDataInternal   "Inherit from model"
-      RTWMemSecDataParameters "Inherit from model"
-      ContentPreviewEnabled   on
-      Controller	      "PID"
-      Form		      "Parallel"
-      TimeDomain	      "Continuous-time"
-      UseExternalTs	      off
-      SampleTime	      "-1"
-      IntegratorMethod	      "Forward Euler"
-      FilterMethod	      "Forward Euler"
-      ControllerParametersSource "internal"
-      P			      "1"
-      I			      "2.5"
-      D			      "0"
-      UseFilter		      on
-      N			      "100"
-      TunerSelectOption	      "Transfer Function Based (PID Tuner App)"
-      ZeroCross		      on
-      InitialConditionSource  "internal"
-      InitialConditionForIntegrator "0"
-      InitialConditionForFilter	"0"
-      DifferentiatorICPrevScaledInput "0"
-      ExternalReset	      "none"
-      IgnoreLimit	      off
-      TrackingMode	      off
-      Kt		      "1"
-      LimitOutput	      off
-      SatLimitsSource	      "internal"
-      UpperSaturationLimit    "inf"
-      LowerSaturationLimit    "-inf"
-      LinearizeAsGain	      on
-      AntiWindupMode	      "none"
-      Kb		      "1"
-      RndMeth		      "Floor"
-      SaturateOnIntegerOverflow	off
-      LockScale		      off
-      PGainOutDataTypeStr     "Inherit: Inherit via internal rule"
-      PProdOutDataTypeStr     "Inherit: Inherit via internal rule"
-      POutMin		      "[]"
-      POutMax		      "[]"
-      IGainOutDataTypeStr     "Inherit: Inherit via internal rule"
-      IProdOutDataTypeStr     "Inherit: Inherit via internal rule"
-      IOutMin		      "[]"
-      IOutMax		      "[]"
-      DGainOutDataTypeStr     "Inherit: Inherit via internal rule"
-      DProdOutDataTypeStr     "Inherit: Inherit via internal rule"
-      DOutMin		      "[]"
-      DOutMax		      "[]"
-      NGainOutDataTypeStr     "Inherit: Inherit via internal rule"
-      NProdOutDataTypeStr     "Inherit: Inherit via internal rule"
-      NOutMin		      "[]"
-      NOutMax		      "[]"
-      SumOutDataTypeStr	      "Inherit: Inherit via internal rule"
-      SumOutMin		      "[]"
-      SumOutMax		      "[]"
-      SaturationOutDataTypeStr "Inherit: Same as input"
-      SaturationOutMin	      "[]"
-      SaturationOutMax	      "[]"
-      PParamDataTypeStr	      "Inherit: Inherit via internal rule"
-      PParamMin		      "[]"
-      PParamMax		      "[]"
-      IParamDataTypeStr	      "Inherit: Inherit via internal rule"
-      IParamMin		      "[]"
-      IParamMax		      "[]"
-      DParamDataTypeStr	      "Inherit: Inherit via internal rule"
-      DParamMin		      "[]"
-      DParamMax		      "[]"
-      NParamDataTypeStr	      "Inherit: Inherit via internal rule"
-      NParamMin		      "[]"
-      NParamMax		      "[]"
-      KbParamDataTypeStr      "Inherit: Inherit via internal rule"
-      KbParamMin	      "[]"
-      KbParamMax	      "[]"
-      KtParamDataTypeStr      "Inherit: Inherit via internal rule"
-      KtParamMin	      "[]"
-      KtParamMax	      "[]"
-      KbOutDataTypeStr	      "Inherit: Inherit via internal rule"
-      KbOutMin		      "[]"
-      KbOutMax		      "[]"
-      KtOutDataTypeStr	      "Inherit: Inherit via internal rule"
-      KtOutMin		      "[]"
-      KtOutMax		      "[]"
-      IntegratorOutDataTypeStr "Inherit: Inherit via internal rule"
-      IntegratorOutMin	      "[]"
-      IntegratorOutMax	      "[]"
-      FilterOutDataTypeStr    "Inherit: Inherit via internal rule"
-      FilterOutMin	      "[]"
-      FilterOutMax	      "[]"
-      SumI1OutDataTypeStr     "Inherit: Inherit via internal rule"
-      SumI1OutMin	      "[]"
-      SumI1OutMax	      "[]"
-      SumI2OutDataTypeStr     "Inherit: Inherit via internal rule"
-      SumI2OutMin	      "[]"
-      SumI2OutMax	      "[]"
-      SumI3OutDataTypeStr     "Inherit: Inherit via internal rule"
-      SumI3OutMin	      "[]"
-      SumI3OutMax	      "[]"
-      SumI4OutDataTypeStr     "Inherit: Inherit via internal rule"
-      SumI4OutMin	      "[]"
-      SumI4OutMax	      "[]"
-      SumDOutDataTypeStr      "Inherit: Inherit via internal rule"
-      SumDOutMin	      "[]"
-      SumDOutMax	      "[]"
-      SumAccumDataTypeStr     "Inherit: Inherit via internal rule"
-      SumI1AccumDataTypeStr   "Inherit: Inherit via internal rule"
-      SumI2AccumDataTypeStr   "Inherit: Inherit via internal rule"
-      SumI3AccumDataTypeStr   "Inherit: Inherit via internal rule"
-      SumI4AccumDataTypeStr   "Inherit: Inherit via internal rule"
-      SumDAccumDataTypeStr    "Inherit: Inherit via internal rule"
-      DifferentiatorOutDataTypeStr "Inherit: Inherit via internal rule"
-      DifferentiatorOutMin    "[]"
-      DifferentiatorOutMax    "[]"
-      FilterDiffNumProductOutputDataTypeStr "Inherit: Inherit via internal rule"
-      FilterDiffDenProductOutputDataTypeStr "Inherit: Inherit via internal rule"
-      FilterDiffNumAccumDataTypeStr "Inherit: Inherit via internal rule"
-      FilterDiffDenAccumDataTypeStr "Inherit: Inherit via internal rule"
-      FilterDiffOutCoefDataTypeStr "Inherit: Inherit via internal rule"
-      FilterDiffOutCoefMin    "[]"
-      FilterDiffOutCoefMax    "[]"
-      ReciprocalOutDataTypeStr "Inherit: Inherit via internal rule"
-      ReciprocalOutMin	      "[]"
-      ReciprocalOutMax	      "[]"
-      SumDenOutDataTypeStr    "Inherit: Inherit via internal rule"
-      SumDenOutMin	      "[]"
-      SumDenOutMax	      "[]"
-      SumNumOutDataTypeStr    "Inherit: Inherit via internal rule"
-      SumNumOutMin	      "[]"
-      SumNumOutMax	      "[]"
-      SumDenAccumDataTypeStr  "Inherit: Inherit via internal rule"
-      SumNumAccumDataTypeStr  "Inherit: Inherit via internal rule"
-      DivideOutDataTypeStr    "Inherit: Inherit via internal rule"
-      DivideOutMin	      "[]"
-      DivideOutMax	      "[]"
-      UdiffTsProdOutDataTypeStr	"Inherit: Inherit via internal rule"
-      UdiffTsProdOutMin	      "[]"
-      UdiffTsProdOutMax	      "[]"
-      NTsProdOutDataTypeStr   "Inherit: Inherit via internal rule"
-      NTsProdOutMin	      "[]"
-      NTsProdOutMax	      "[]"
-      UintegralTsProdOutDataTypeStr "Inherit: Inherit via internal rule"
-      UintegralTsProdOutMin   "[]"
-      UintegralTsProdOutMax   "[]"
-      UngainTsProdOutDataTypeStr "Inherit: Inherit via internal rule"
-      UngainTsProdOutMin      "[]"
-      UngainTsProdOutMax      "[]"
-      IntegratorContinuousStateAttributes "''"
-      IntegratorStateMustResolveToSignalObject off
-      IntegratorRTWStateStorageClass "Auto"
-      FilterContinuousStateAttributes "''"
-      FilterStateMustResolveToSignalObject off
-      FilterRTWStateStorageClass "Auto"
-      ParallelPVariant	      "InternalParameters"
-      IdealPVariant	      "Disabled"
-      IVariant		      "InternalParameters"
-      DVariant		      "InternalParameters"
-      IntegratorVariant	      "Continuous"
-      SatVariant	      "Disabled"
-      AWVariant		      "Passthrough"
-      PCopyVariant	      "Disabled"
-      TRVariant		      "Disabled"
-      FdbkBlocksVariant	      "Forward"
-      IdealPFdbkVariant	      "Disabled"
-      SatFdbkVariant	      "Disabled"
-      DerivativeFilterVariant "ContFilter"
-      NVariant		      "InternalParameters"
-      NCopyVariant	      "Disabled"
-      FilterICVariant	      "InternalICsFilter"
-      IntegratorICVariant     "InternalICs"
-      ExternalResetVariant    "Disabled"
-      TRSumVariant	      "Passthrough"
-      SumFdbkVariant	      "Disabled"
-      SumVariant	      "Sum_PID"
-      TsampFilterVariant      "InternalTs"
-      TsampNgainVariant	      "Passthrough"
-      TsampIntegralVariant    "Passthrough"
-      ExternalSaturationOutDataTypeStr "Inherit: Same as second input"
-      InitialConditionSetting "Auto"
-    }
-    Block {
       BlockType		      SubSystem
       Name		      "QBot 2e Basic Motor Commands\nand Sensor Measurement"
       SID		      "363"
       Ports		      [2, 4]
-      Position		      [1085, 114, 1280, 356]
+      Position		      [810, 114, 1005, 356]
       ZOrder		      256
       RequestExecContextInheritance off
       System {
@@ -2912,7 +2693,7 @@ Model {
       Name		      "QBot 2e Full Kinematics (No Gyro)"
       SID		      "305"
       Ports		      [2, 8]
-      Position		      [1445, 99, 1625, 286]
+      Position		      [1170, 99, 1350, 286]
       ZOrder		      -29
       RequestExecContextInheritance off
       System {
@@ -3718,7 +3499,7 @@ Model {
       "locity)"
       SID		      "333"
       Ports		      [2, 2]
-      Position		      [815, 133, 1000, 297]
+      Position		      [540, 133, 725, 297]
       ZOrder		      -30
       RequestExecContextInheritance off
       System {
@@ -3952,46 +3733,10 @@ Model {
       }
     }
     Block {
-      BlockType		      Scope
-      Name		      "Scope"
-      SID		      "429"
-      Ports		      [3]
-      Position		      [1465, 8, 1495, 42]
-      ZOrder		      411
-      ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
-      "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
-      "ources','WiredSimulink',true),extmgr.Configuration('Visuals','Time Domain',true,'SerializedDisplays',{struct('Mi"
-      "nYLimReal','-0.38874','MaxYLimReal','1.32097','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','1.32097','Leg"
-      "endVisibility','On','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274"
-      "509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.6235294"
-      "11764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.7176470"
-      "58823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLab"
-      "el>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',6,'LineNames',{{'Gain:1','Gain:2','Gai"
-      "n:3','Gain:4','Gain3','QBot 2e Full Kinematics (No Gyro)/vC'}},'ShowContent',true,'Placement',1)},'DisplayProper"
-      "tyDefaults',struct('MinYLimReal','-0.38874','MaxYLimReal','1.32097','YLabelReal','','MinYLimMag','0.00000','MaxY"
-      "LimMag','1.32097','LegendVisibility','On','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'Ax"
-      "esTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[0.0745098039215686 0.62352941"
-      "1764706 1;1 0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0.274509803921569 1;0.39"
-      "2156862745098 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863"
-      "])),extmgr.Configuration('Tools','Plot Navigation',true,'PreviousAutoscale','XY'),extmgr.Configuration('Tools','"
-      "Measurements',true,'Version','2021a')),'Version','2021a','Position',[1 41 1920 963])"
-      NumInputPorts	      "3"
-      Floating		      off
-    }
-    Block {
-      BlockType		      Sum
-      Name		      "Sum"
-      SID		      "421"
-      Ports		      [2, 1]
-      Position		      [605, 135, 625, 155]
-      ZOrder		      403
-      Inputs		      "|-+"
-    }
-    Block {
       BlockType		      Terminator
       Name		      "Terminator1"
       SID		      "344"
-      Position		      [1695, 100, 1705, 110]
+      Position		      [1365, 100, 1375, 110]
       ZOrder		      9
       ShowName		      off
     }
@@ -3999,7 +3744,7 @@ Model {
       BlockType		      Terminator
       Name		      "Terminator10"
       SID		      "339"
-      Position		      [1695, 175, 1705, 185]
+      Position		      [1365, 175, 1375, 185]
       ZOrder		      11
       ShowName		      off
     }
@@ -4007,7 +3752,7 @@ Model {
       BlockType		      Terminator
       Name		      "Terminator11"
       SID		      "340"
-      Position		      [1695, 200, 1705, 210]
+      Position		      [1365, 200, 1375, 210]
       ZOrder		      12
       ShowName		      off
     }
@@ -4015,7 +3760,7 @@ Model {
       BlockType		      Terminator
       Name		      "Terminator13"
       SID		      "237"
-      Position		      [885, -105, 895, -95]
+      Position		      [185, -30, 195, -20]
       ZOrder		      14
       ShowName		      off
     }
@@ -4023,7 +3768,7 @@ Model {
       BlockType		      Terminator
       Name		      "Terminator2"
       SID		      "345"
-      Position		      [-235, 125, -225, 135]
+      Position		      [175, 125, 185, 135]
       ZOrder		      9
       ShowName		      off
     }
@@ -4031,7 +3776,7 @@ Model {
       BlockType		      Terminator
       Name		      "Terminator8"
       SID		      "341"
-      Position		      [1695, 125, 1705, 135]
+      Position		      [1365, 125, 1375, 135]
       ZOrder		      9
       ShowName		      off
     }
@@ -4039,7 +3784,7 @@ Model {
       BlockType		      Terminator
       Name		      "Terminator9"
       SID		      "342"
-      Position		      [1695, 150, 1705, 160]
+      Position		      [1365, 150, 1375, 160]
       ZOrder		      10
       ShowName		      off
     }
@@ -4048,7 +3793,7 @@ Model {
       Name		      "XY Figure"
       SID		      "343"
       Ports		      [2]
-      Position		      [1695, 217, 1740, 268]
+      Position		      [1420, 217, 1465, 268]
       ZOrder		      -47
       BackgroundColor	      "lightBlue"
       LibraryVersion	      "1.2097"
@@ -4069,24 +3814,6 @@ Model {
       initial_position	      "581  184  710  615"
       initial_visibility      off
       sample_time	      "-1"
-    }
-    Block {
-      BlockType		      TransportDelay
-      Name		      "cognitive reaction time (CRT)"
-      SID		      "414"
-      Ports		      [1, 1]
-      Position		      [-40, 195, 0, 235]
-      ZOrder		      396
-      DelayTime		      ".6-.35"
-    }
-    Block {
-      BlockType		      TransportDelay
-      Name		      "foot movement time (FMT)"
-      SID		      "434"
-      Ports		      [1, 1]
-      Position		      [245, 95, 285, 135]
-      ZOrder		      414
-      DelayTime		      ".3-.25"
     }
     Line {
       ZOrder		      10
@@ -4155,28 +3882,17 @@ Model {
       DstPort		      1
     }
     Line {
-      ZOrder		      262
+      ZOrder		      22
       SrcBlock		      "Gain3"
       SrcPort		      1
-      Points		      [45, 0]
-      Branch {
-	ZOrder			310
-	Points			[0, -150]
-	DstBlock		"Scope"
-	DstPort			2
-      }
-      Branch {
-	ZOrder			306
-	Points			[75, 0]
-	DstBlock		"Sum"
-	DstPort			2
-      }
+      DstBlock		      "QBot 2e Inverse Kinematics \n(Forward Velocity and Angular Velocity\n into Left and Right Wheel"
+      " Vellocity)"
+      DstPort		      1
     }
     Line {
       ZOrder		      23
       SrcBlock		      "QBot 2e Full Kinematics (No Gyro)"
       SrcPort		      2
-      Points		      [65, 0]
       DstBlock		      "Terminator8"
       DstPort		      1
     }
@@ -4184,7 +3900,6 @@ Model {
       ZOrder		      24
       SrcBlock		      "QBot 2e Full Kinematics (No Gyro)"
       SrcPort		      3
-      Points		      [65, 0]
       DstBlock		      "Terminator9"
       DstPort		      1
     }
@@ -4192,7 +3907,6 @@ Model {
       ZOrder		      25
       SrcBlock		      "QBot 2e Full Kinematics (No Gyro)"
       SrcPort		      4
-      Points		      [65, 0]
       DstBlock		      "Terminator10"
       DstPort		      1
     }
@@ -4200,8 +3914,14 @@ Model {
       ZOrder		      26
       SrcBlock		      "QBot 2e Full Kinematics (No Gyro)"
       SrcPort		      5
-      Points		      [65, 0]
       DstBlock		      "Terminator11"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      28
+      SrcBlock		      "Host Keyboard"
+      SrcPort		      2
+      DstBlock		      "Data Type Conversion"
       DstPort		      1
     }
     Line {
@@ -4219,11 +3939,10 @@ Model {
       DstPort		      1
     }
     Line {
-      ZOrder		      353
+      ZOrder		      31
       SrcBlock		      "Gain2"
       SrcPort		      1
-      Points		      [20, 0; 0, -40]
-      DstBlock		      "foot movement time (FMT)"
+      DstBlock		      "Add"
       DstPort		      1
     }
     Line {
@@ -4256,6 +3975,13 @@ Model {
       DstPort		      1
     }
     Line {
+      ZOrder		      36
+      SrcBlock		      "Data Type Conversion"
+      SrcPort		      1
+      DstBlock		      "Demux"
+      DstPort		      1
+    }
+    Line {
       ZOrder		      37
       SrcBlock		      "Gain5"
       SrcPort		      1
@@ -4280,29 +4006,8 @@ Model {
       ZOrder		      40
       SrcBlock		      "QBot 2e Full Kinematics (No Gyro)"
       SrcPort		      1
-      Points		      [21, 0]
-      Branch {
-	ZOrder			245
-	Points			[0, -30; -210, 0]
-	Branch {
-	  ZOrder		  311
-	  Points		  [0, -40]
-	  DstBlock		  "Scope"
-	  DstPort		  3
-	}
-	Branch {
-	  ZOrder		  261
-	  Points		  [-860, 0; 0, 70]
-	  DstBlock		  "Sum"
-	  DstPort		  1
-	}
-      }
-      Branch {
-	ZOrder			244
-	Points			[44, 0]
-	DstBlock		"Terminator1"
-	DstPort			1
-      }
+      DstBlock		      "Terminator1"
+      DstPort		      1
     }
     Line {
       ZOrder		      41
@@ -4315,7 +4020,6 @@ Model {
       ZOrder		      42
       SrcBlock		      "Gain1"
       SrcPort		      1
-      Points		      [320, 0]
       DstBlock		      "QBot 2e Inverse Kinematics \n(Forward Velocity and Angular Velocity\n into Left and Right Wheel"
       " Vellocity)"
       DstPort		      2
@@ -4350,72 +4054,10 @@ Model {
       DstBlock		      "Display2"
       DstPort		      1
     }
-    Line {
-      ZOrder		      242
-      SrcBlock		      "Data Type Conversion"
-      SrcPort		      1
-      DstBlock		      "Gain"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      348
-      SrcBlock		      "cognitive reaction time (CRT)"
-      SrcPort		      1
-      DstBlock		      "Demux"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      342
-      SrcBlock		      "PID Controller"
-      SrcPort		      1
-      DstBlock		      "QBot 2e Inverse Kinematics \n(Forward Velocity and Angular Velocity\n into Left and Right Wheel"
-      " Vellocity)"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      343
-      SrcBlock		      "Sum"
-      SrcPort		      1
-      Points		      [28, 0; 0, 30]
-      DstBlock		      "PID Controller"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      297
-      SrcBlock		      "Host Keyboard"
-      SrcPort		      2
-      DstBlock		      "Data Type Conversion"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      352
-      SrcBlock		      "Gain"
-      SrcPort		      1
-      Points		      [20, 0]
-      Branch {
-	ZOrder			383
-	Points			[0, -200]
-	DstBlock		"Scope"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			382
-	DstBlock		"cognitive reaction time (CRT)"
-	DstPort			1
-      }
-    }
-    Line {
-      ZOrder		      354
-      SrcBlock		      "foot movement time (FMT)"
-      SrcPort		      1
-      Points		      [65, 0; 0, 40]
-      DstBlock		      "Add"
-      DstPort		      1
-    }
     Annotation {
       SID		      "346"
       Name		      "Vc: Up(+), Down(-)\nOmega: Left (+), Right(-)"
-      Position		      [-407, 275, -245, 309]
+      Position		      [3, 275, 165, 309]
       InternalMargins	      [0, 0, 0, 0]
       ZOrder		      -2
       FontName		      "Arial"
@@ -4436,7 +4078,7 @@ MatData {
     "   !          (  0      #@   +@!   &    \"     (         !0    @    !     0    $         !0 $ !$    !    50   &ES7"
     "W5N:7%U90          ;VQD7V)L;V-K          !O;&1?;F%M90           &ES7VUO9&5L7V-L;W-I;F< :7-?9&5L971E9              "
     ".    ,     8    (    \"0(        %    \"     $    !     0         \"  $  0    X    X    !@    @    &          4   "
-    " (     0    $    !          D    (          B 34 .    .     8    (    !          %    \"     $    %     0         "
+    " (     0    $    !          D    (         /R 34 .    .     8    (    !          %    \"     $    %     0         "
     "0    !0   $A)3\"TQ    #@   #     &    \"     D\"        !0    @    !     0    $          @ !       .    ,     8   "
     " (    \"0(        %    \"     $    !     0         \"  $       X    880  !@    @    \"          4    (     0    $ "
     "   !          4 !  /     0   #P   !O;&1?8F]A<F1?='EP90!Q.                 !Q8F]T,@            !Q8F]T,F4           "
@@ -4740,7 +4382,7 @@ MatData {
     "-T7VYA;64       X    8 0  !@    @    \"          4    (     0    $    !          4 !  -     0   \"<   !O;&1?;F%M90"
     "      :7-?9&5L971E9    &]B:F5C=%]B;&]C:P  #@   #@    &    \"     0         !0    @    !    !0    $         $     4"
     "   !(24PM,0    X    P    !@    @    ) @        4    (     0    $    !          (  0      #@   #@    &    \"     8 "
-    "        !0    @    !     0    $         \"0    @         \"(!-0 "
+    "        !0    @    !     0    $         \"0    @         _(!-0 "
   }
   DataRecord {
     Tag			    DataTag2
@@ -4748,7 +4390,7 @@ MatData {
     "-T7VYA;64       X    8 0  !@    @    \"          4    (     0    $    !          4 !  -     0   \"<   !O;&1?;F%M90"
     "      :7-?9&5L971E9    &]B:F5C=%]B;&]C:P  #@   #@    &    \"     0         !0    @    !    !0    $         $     4"
     "   !(24PM,0    X    P    !@    @    ) @        4    (     0    $    !          (  0      #@   #@    &    \"     8 "
-    "        !0    @    !     0    $         \"0    @         \"(!-0 "
+    "        !0    @    !     0    $         \"0    @         _(!-0 "
   }
 }
 #Finite State Machines
@@ -4759,7 +4401,7 @@ MatData {
 Stateflow {
   machine {
     id			    1
-    name		    "cell_phone"
+    name		    "teleop_arrows"
     sfVersion		    80000041
     firstTarget		    31
   }

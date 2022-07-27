@@ -1,5 +1,5 @@
 Model {
-  Name			  "second"
+  Name			  "autonomous_1"
   Version		  10.3
   SavedCharacterEncoding  "windows-1252"
   ModelUUID		  "14454879-ccb1-4e09-a5e4-3f25db9c7a0c"
@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "9.87"
+    ComputedModelVersion    "9.90"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -19,71 +19,65 @@ Model {
     IsExportFunctionModel   0
     SimulinkSubDomainType   "Simulink"
     NumParameterArguments   0
-    NumExternalFileReferences 11
+    NumExternalFileReferences 10
     ExternalFileReference {
       Reference		      "slctrlblks/Closed-Loop PID Autotuner"
-      Path		      "second/Closed-Loop PID Autotuner"
+      Path		      "autonomous_1/Closed-Loop PID Autotuner"
       SID		      "938"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "quarc_library/Continuous/Second-Order\nLow-Pass Filter"
-      Path		      "second/Encoder_to_Velocity/Second-Order Low-Pass Filter2"
+      Path		      "autonomous_1/Encoder_to_Velocity/Second-Order Low-Pass Filter2"
       SID		      "850"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "quarc_library/Continuous/Second-Order\nLow-Pass Filter"
-      Path		      "second/Encoder_to_Velocity1/Second-Order Low-Pass Filter2"
+      Path		      "autonomous_1/Encoder_to_Velocity1/Second-Order Low-Pass Filter2"
       SID		      "855"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "quarc_library/Data Acquisition/Generic/Configuration/HIL Initialize"
-      Path		      "second/HIL Initialize"
+      Path		      "autonomous_1/HIL Initialize"
       SID		      "858"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "pid_lib/PID Controller"
-      Path		      "second/PID Controller"
+      Path		      "autonomous_1/PID Controller"
       SID		      "917"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "quarc_library/Discrete/Bias Removal"
-      Path		      "second/QBot 2e Basic Motor Commands and Sensor Measurement/Bias Removal"
+      Path		      "autonomous_1/QBot 2e Basic Motor Commands and Sensor Measurement/Bias Removal"
       SID		      "882"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "quarc_library/Data Acquisition/Generic/Immediate I//O/HIL Read"
-      Path		      "second/QBot 2e Basic Motor Commands and Sensor Measurement/QBot2e_IO_Basic/HIL Read1"
+      Path		      "autonomous_1/QBot 2e Basic Motor Commands and Sensor Measurement/QBot2e_IO_Basic/HIL Read1"
       SID		      "890"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "quarc_library/Data Acquisition/Generic/Immediate I//O/HIL Write"
-      Path		      "second/QBot 2e Basic Motor Commands and Sensor Measurement/QBot2e_IO_Basic/HIL Write"
+      Path		      "autonomous_1/QBot 2e Basic Motor Commands and Sensor Measurement/QBot2e_IO_Basic/HIL Write"
       SID		      "891"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
-      Reference		      "quarc_library/Communications/Basic/Stream Client"
-      Path		      "second/Stream Client"
-      SID		      "972"
-      Type		      "LIBRARY_BLOCK"
-    }
-    ExternalFileReference {
       Reference		      "quarc_library/Communications/Basic/Stream Server"
-      Path		      "second/Stream Server"
+      Path		      "autonomous_1/Stream Server"
       SID		      "963"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "quarc_library/Communications/Basic/Stream Server"
-      Path		      "second/Stream Server1"
-      SID		      "986"
+      Path		      "autonomous_1/Stream Server1"
+      SID		      "978"
       Type		      "LIBRARY_BLOCK"
     }
     OrderedModelArguments   1
@@ -171,9 +165,9 @@ Model {
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
 	  Extents		  [1882.0, 791.0]
-	  ZoomFactor		  [0.73096668208424387]
-	  Offset		  [-1069.1527197383075, -284.31433260718529]
-	  SceneRectInView	  [-1069.1527197383075, -284.31433260718529, 2574.6727533924723, 1082.1286652143706]
+	  ZoomFactor		  [0.7662913438966189]
+	  Offset		  [-973.26981357874865, -225.37223359964935]
+	  SceneRectInView	  [-973.26981357874865, -225.37223359964935, 2455.9849396574973, 1032.2444671992987]
 	}
 	Object {
 	  $ObjectID		  6
@@ -237,19 +231,6 @@ Model {
 	Dimension		2
 	Object {
 	  $ObjectID		  11
-	  Type			  "Simulink:Editor:ReferencedFiles"
-	  ID			  "Referenced Files"
-	  Visible		  [0]
-	  CreateCallback	  ""
-	  UserData		  "{\"filterShowRefModels\":\"true\",\"filterShowRefSubs\":\"true\",\"filterShowOnlyDirtyFiles\":\"false\"}\n"
-	  Floating		  [0]
-	  DockPosition		  "Left"
-	  Width			  [640]
-	  Height		  [480]
-	  Minimized		  "Unset"
-	}
-	Object {
-	  $ObjectID		  12
 	  Type			  "GLUE2:PropertyInspector"
 	  ID			  "Property Inspector"
 	  Visible		  [0]
@@ -257,6 +238,19 @@ Model {
 	  UserData		  ""
 	  Floating		  [0]
 	  DockPosition		  "Right"
+	  Width			  [640]
+	  Height		  [480]
+	  Minimized		  "Unset"
+	}
+	Object {
+	  $ObjectID		  12
+	  Type			  "Simulink:Editor:ReferencedFiles"
+	  ID			  "Referenced Files"
+	  Visible		  [0]
+	  CreateCallback	  ""
+	  UserData		  "{\"filterShowRefModels\":\"true\",\"filterShowRefSubs\":\"true\",\"filterShowOnlyDirtyFiles\":\"false\"}\n"
+	  Floating		  [0]
+	  DockPosition		  "Left"
 	  Width			  [640]
 	  Height		  [480]
 	  Minimized		  "Unset"
@@ -288,9 +282,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Rohan"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Jul 20 13:00:23 2022"
-  RTWModifiedTimeStamp	  580222822
-  ModelVersionFormat	  "%<AutoIncrement:9.87>"
+  LastModifiedDate	  "Mon Jul 25 10:37:48 2022"
+  RTWModifiedTimeStamp	  580646234
+  ModelVersionFormat	  "%<AutoIncrement:9.90>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "none"
@@ -350,11 +344,11 @@ Model {
     $PropName		    "DataLoggingOverride"
     $ObjectID		    13
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
-    model_		    "second"
+    model_		    "autonomous_1"
     Array {
       Type		      "Cell"
       Dimension		      1
-      Cell		      "second"
+      Cell		      "autonomous_1"
       PropName		      "logAsSpecifiedByModels_"
     }
     Array {
@@ -1197,7 +1191,7 @@ Model {
 		  ExtModeStaticAllocSize  1000000
 		  ExtModeTransport	  0
 		  ExtModeMexFile	  "quarc_comm"
-		  ExtModeMexArgs	  "'-w -d /tmp -uri %u', 'tcpip://192.168.2.30:17002'"
+		  ExtModeMexArgs	  "'-w -d /tmp -uri %u', 'tcpip://192.168.2.32:17001'"
 		  ExtModeIntrfLevel	  "Level1"
 		  RTWCAPISignals	  off
 		  RTWCAPIParams		  off
@@ -1602,20 +1596,9 @@ Model {
     Block {
       BlockType		      Terminator
     }
-    Block {
-      BlockType		      ToWorkspace
-      VariableName	      "simulink_output"
-      MaxDataPoints	      "1000"
-      Decimation	      "1"
-      SaveFormat	      "Array"
-      Save2DSignal	      "3-D array (concatenate along third dimension)"
-      FixptAsFi		      off
-      NumInputs		      "1"
-      SampleTime	      "0"
-    }
   }
   System {
-    Name		    "second"
+    Name		    "autonomous_1"
     Location		    [-8, -8, 1928, 1048]
     SystemRect		    [0.000000, 0.000000, 0.000000, 0.000000]
     Open		    on
@@ -1632,9 +1615,9 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "73"
+    ZoomFactor		    "77"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "993"
+    SIDHighWatermark	    "982"
     SimulinkSubDomain	    "Simulink"
     Block {
       BlockType		      BusSelector
@@ -1710,6 +1693,14 @@ Model {
       UseExternalTuningParams off
       OutputChoice	      "VariantCandD"
       SingleMultiRateVariant  "SingleSamplingRate"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant"
+      SID		      "976"
+      Position		      [-950, 235, -920, 265]
+      ZOrder		      675
+      Value		      "0.3"
     }
     Block {
       BlockType		      Display
@@ -2188,10 +2179,10 @@ Model {
     }
     Block {
       BlockType		      Gain
-      Name		      "Gain1"
-      SID		      "992"
-      Position		      [-715, 295, -685, 325]
-      ZOrder		      690
+      Name		      "Gain"
+      SID		      "982"
+      Position		      [-745, 160, -715, 190]
+      ZOrder		      688
       Gain		      "1.18"
     }
     Block {
@@ -2199,7 +2190,7 @@ Model {
       Name		      "HIL Initialize"
       SID		      "858"
       Ports		      []
-      Position		      [420, 14, 504, 89]
+      Position		      [450, 9, 534, 84]
       ZOrder		      -13
       Priority		      "-99"
       AttributesFormatString  "%<object_name> (%<board_type>-%<board_number>)"
@@ -2428,6 +2419,13 @@ Model {
     }
     Block {
       BlockType		      ManualSwitch
+      Name		      "Manual Switch"
+      SID		      "975"
+      Position		      [-805, 157, -775, 193]
+      ZOrder		      674
+    }
+    Block {
+      BlockType		      ManualSwitch
       Name		      "Manual Switch1"
       SID		      "939"
       Position		      [-475, 437, -445, 473]
@@ -2524,24 +2522,16 @@ Model {
       BlockType		      Constant
       Name		      "One1"
       SID		      "964"
-      Position		      [-435, 165, -405, 195]
+      Position		      [1280, 110, 1310, 140]
       ZOrder		      665
       OutDataTypeStr	      "Inherit: Inherit via back propagation"
     }
     Block {
       BlockType		      Constant
       Name		      "One2"
-      SID		      "977"
-      Position		      [-1050, 300, -1020, 330]
-      ZOrder		      677
-      OutDataTypeStr	      "Inherit: Inherit via back propagation"
-    }
-    Block {
-      BlockType		      Constant
-      Name		      "One3"
-      SID		      "990"
-      Position		      [1265, 60, 1295, 90]
-      ZOrder		      686
+      SID		      "981"
+      Position		      [1280, -15, 1310, 15]
+      ZOrder		      687
       OutDataTypeStr	      "Inherit: Inherit via back propagation"
     }
     Block {
@@ -2570,7 +2560,7 @@ Model {
       FilterMethod	      "Forward Euler"
       ControllerParametersSource "internal"
       P			      "1"
-      I			      "2"
+      I			      "2.5"
       D			      "0"
       UseFilter		      on
       N			      "0"
@@ -3701,204 +3691,26 @@ Model {
       Name		      "Scope"
       SID		      "928"
       Ports		      [2]
-      Position		      [-630, 451, -600, 484]
+      Position		      [-665, 451, -635, 484]
       ZOrder		      321
       ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
       "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
       "ources','WiredSimulink',true,'DataLoggingVariableName','ScopeData1'),extmgr.Configuration('Visuals','Time Domain"
-      "',true,'SerializedDisplays',{struct('MinYLimReal','-0.3','MaxYLimReal','0.3','YLabelReal','','MinYLimMag','0.000"
-      "00','MaxYLimMag','0.3','LegendVisibility','Off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 "
-      "0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;"
-      "0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 "
-      "0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392"
-      "156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',2,'LineNam"
-      "es',{{'Stream Client/4','QBot 2e Diff Drive Kinematics/vC'}},'ShowContent',true,'Placement',1)},'DisplayProperty"
-      "Defaults',struct('MinYLimReal','-0.3','MaxYLimReal','0.3','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','0"
-      ".3','LegendVisibility','Off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',"
-      "[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[0.0745098039215686 0.623529411764706 1;1 0"
-      ".411764705882353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0.274509803921569 1;0.392156862745098"
-      " 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863])),extmgr.Co"
-      "nfiguration('Tools','Plot Navigation',true,'OnceAtStop',false,'PreviousAutoscale','X'),extmgr.Configuration('Too"
-      "ls','Measurements',true,'Version','2021a')),'Version','2021a','Position',[300 818 495 424])"
+      "',true,'SerializedDisplays',{struct('MinYLimReal','-.3','MaxYLimReal','.3','YLabelReal','','MinYLimMag','0.00000"
+      "','MaxYLimMag','0.29622','LegendVisibility','Off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 "
+      "0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.066666666666666"
+      "7;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.83137254901960"
+      "8 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.6509803"
+      "92156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',2,'LineN"
+      "ames',{{'Manual Switch','QBot 2e Diff Drive Kinematics/vC'}},'ShowContent',true,'Placement',1)},'DisplayProperty"
+      "Defaults',struct('MinYLimReal','-.3','MaxYLimReal','.3','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','0.2"
+      "9622','LegendVisibility','Off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor"
+      "',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[0.0745098039215686 0.623529411764706 1;1"
+      " 0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0.274509803921569 1;0.3921568627450"
+      "98 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863])),extmgr."
+      "Configuration('Tools','Plot Navigation',true,'OnceAtStop',false,'PreviousAutoscale','X'),extmgr.Configuration('T"
+      "ools','Measurements',true,'Version','2021a')),'Version','2021a','Position',[334 1406 436 292])"
       NumInputPorts	      "2"
-      Floating		      off
-    }
-    Block {
-      BlockType		      Scope
-      Name		      "Scope1"
-      SID		      "965"
-      Ports		      [1]
-      Position		      [-110, -126, -80, -94]
-      ZOrder		      666
-      ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
-      "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
-      "ources','WiredSimulink',true,'DataLoggingVariableName','ScopeData1'),extmgr.Configuration('Visuals','Time Domain"
-      "',true),extmgr.Configuration('Tools','Plot Navigation',true),extmgr.Configuration('Tools','Measurements',true)),"
-      "'Version','2021a')"
-      NumInputPorts	      "1"
-      Floating		      off
-    }
-    Block {
-      BlockType		      Scope
-      Name		      "Scope10"
-      SID		      "978"
-      Ports		      [1]
-      Position		      [-695, 69, -665, 101]
-      ZOrder		      678
-      ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
-      "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
-      "ources','WiredSimulink',true,'DataLoggingVariableName','ScopeData5'),extmgr.Configuration('Visuals','Time Domain"
-      "',true),extmgr.Configuration('Tools','Plot Navigation',true),extmgr.Configuration('Tools','Measurements',true)),"
-      "'Version','2021a')"
-      NumInputPorts	      "1"
-      Floating		      off
-    }
-    Block {
-      BlockType		      Scope
-      Name		      "Scope11"
-      SID		      "989"
-      Ports		      [1]
-      Position		      [1455, 39, 1485, 71]
-      ZOrder		      685
-      ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
-      "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
-      "ources','WiredSimulink',true,'DataLoggingVariableName','ScopeData1'),extmgr.Configuration('Visuals','Time Domain"
-      "',true,'SerializedDisplays',{struct('MinYLimReal','-1.00000','MaxYLimReal','1.00000','YLabelReal','','MinYLimMag"
-      "','0.00000','MaxYLimMag','1.00000','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'Axes"
-      "Color',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.06666"
-      "66666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.8313"
-      "72549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686"
-      " 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines"
-      "',1,'LineNames',{{'Stream Server1/3'}},'ShowContent',true,'Placement',1)},'DisplayPropertyDefaults',struct('MinY"
-      "LimReal','-1.00000','MaxYLimReal','1.00000','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','1.00000','Legen"
-      "dVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.6862745"
-      "09803922 0.686274509803922 0.686274509803922],'ColorOrder',[0.0745098039215686 0.623529411764706 1;1 0.411764705"
-      "882353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0.274509803921569 1;0.392156862745098 0.8313725"
-      "49019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863])),extmgr.Configuratio"
-      "n('Tools','Plot Navigation',true),extmgr.Configuration('Tools','Measurements',true,'Version','2021a')),'Version'"
-      ",'2021a')"
-      NumInputPorts	      "1"
-      Floating		      off
-    }
-    Block {
-      BlockType		      Scope
-      Name		      "Scope2"
-      SID		      "966"
-      Ports		      [1]
-      Position		      [-110, -81, -80, -49]
-      ZOrder		      667
-      ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
-      "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
-      "ources','WiredSimulink',true,'DataLoggingVariableName','ScopeData2'),extmgr.Configuration('Visuals','Time Domain"
-      "',true),extmgr.Configuration('Tools','Plot Navigation',true),extmgr.Configuration('Tools','Measurements',true)),"
-      "'Version','2021a')"
-      NumInputPorts	      "1"
-      Floating		      off
-    }
-    Block {
-      BlockType		      Scope
-      Name		      "Scope3"
-      SID		      "967"
-      Ports		      [1]
-      Position		      [-110, -36, -80, -4]
-      ZOrder		      668
-      ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
-      "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
-      "ources','WiredSimulink',true,'DataLoggingVariableName','ScopeData3'),extmgr.Configuration('Visuals','Time Domain"
-      "',true),extmgr.Configuration('Tools','Plot Navigation',true),extmgr.Configuration('Tools','Measurements',true)),"
-      "'Version','2021a')"
-      NumInputPorts	      "1"
-      Floating		      off
-    }
-    Block {
-      BlockType		      Scope
-      Name		      "Scope4"
-      SID		      "973"
-      Ports		      [1]
-      Position		      [-695, -81, -665, -49]
-      ZOrder		      673
-      ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
-      "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
-      "ources','WiredSimulink',true,'DataLoggingVariableName','ScopeData1'),extmgr.Configuration('Visuals','Time Domain"
-      "',true),extmgr.Configuration('Tools','Plot Navigation',true),extmgr.Configuration('Tools','Measurements',true)),"
-      "'Version','2021a')"
-      NumInputPorts	      "1"
-      Floating		      off
-    }
-    Block {
-      BlockType		      Scope
-      Name		      "Scope5"
-      SID		      "969"
-      Ports		      [1]
-      Position		      [-110, 54, -80, 86]
-      ZOrder		      670
-      ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
-      "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
-      "ources','WiredSimulink',true,'DataLoggingVariableName','ScopeData5'),extmgr.Configuration('Visuals','Time Domain"
-      "',true),extmgr.Configuration('Tools','Plot Navigation',true),extmgr.Configuration('Tools','Measurements',true)),"
-      "'Version','2021a')"
-      NumInputPorts	      "1"
-      Floating		      off
-    }
-    Block {
-      BlockType		      Scope
-      Name		      "Scope6"
-      SID		      "970"
-      Ports		      [1]
-      Position		      [-110, 9, -80, 41]
-      ZOrder		      671
-      ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
-      "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
-      "ources','WiredSimulink',true,'DataLoggingVariableName','ScopeData6'),extmgr.Configuration('Visuals','Time Domain"
-      "',true),extmgr.Configuration('Tools','Plot Navigation',true),extmgr.Configuration('Tools','Measurements',true)),"
-      "'Version','2021a')"
-      NumInputPorts	      "1"
-      Floating		      off
-    }
-    Block {
-      BlockType		      Scope
-      Name		      "Scope7"
-      SID		      "974"
-      Ports		      [1]
-      Position		      [-695, -31, -665, 1]
-      ZOrder		      674
-      ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
-      "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
-      "ources','WiredSimulink',true,'DataLoggingVariableName','ScopeData2'),extmgr.Configuration('Visuals','Time Domain"
-      "',true),extmgr.Configuration('Tools','Plot Navigation',true),extmgr.Configuration('Tools','Measurements',true)),"
-      "'Version','2021a')"
-      NumInputPorts	      "1"
-      Floating		      off
-    }
-    Block {
-      BlockType		      Scope
-      Name		      "Scope8"
-      SID		      "975"
-      Ports		      [1]
-      Position		      [-695, 19, -665, 51]
-      ZOrder		      675
-      ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
-      "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
-      "ources','WiredSimulink',true,'DataLoggingVariableName','ScopeData3'),extmgr.Configuration('Visuals','Time Domain"
-      "',true),extmgr.Configuration('Tools','Plot Navigation',true),extmgr.Configuration('Tools','Measurements',true)),"
-      "'Version','2021a')"
-      NumInputPorts	      "1"
-      Floating		      off
-    }
-    Block {
-      BlockType		      Scope
-      Name		      "Scope9"
-      SID		      "976"
-      Ports		      [1]
-      Position		      [-695, 124, -665, 156]
-      ZOrder		      676
-      NameLocation	      "top"
-      ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
-      "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
-      "ources','WiredSimulink',true,'DataLoggingVariableName','ScopeData4'),extmgr.Configuration('Visuals','Time Domain"
-      "',true),extmgr.Configuration('Tools','Plot Navigation',true),extmgr.Configuration('Tools','Measurements',true)),"
-      "'Version','2021a')"
-      NumInputPorts	      "1"
       Floating		      off
     }
     Block {
@@ -3928,55 +3740,19 @@ Model {
     Block {
       BlockType		      Sin
       Name		      "Sine Wave"
-      SID		      "983"
+      SID		      "974"
       Ports		      [0, 1]
-      Position		      [-1050, 260, -1020, 290]
-      ZOrder		      681
+      Position		      [-955, 115, -925, 145]
+      ZOrder		      673
       Amplitude		      ".3"
       SampleTime	      "0"
-    }
-    Block {
-      BlockType		      Reference
-      Name		      "Stream Client"
-      SID		      "972"
-      Ports		      [2, 5]
-      Position		      [-960, 257, -860, 333]
-      ZOrder		      672
-      AttributesFormatString  "\"tcpip://192.168.2.32:18000\""
-      LibraryVersion	      "1.2097"
-      SourceBlock	      "quarc_library/Communications/Basic/Stream Client"
-      SourceType	      "Stream Client"
-      SourceProductName	      "QUARC Targets"
-      MultithreadedSim	      "auto"
-      uri_source	      "Specify via dialog (do not evaluate)"
-      uri		      "tcpip://192.168.2.32:18000"
-      apply_uri_to_all_configs on
-      send_buffer_size	      "1460"
-      receive_buffer_size     "1460"
-      byte_order	      "little endian (Intel - LSB first)"
-      optimization	      "Minimum latency"
-      send_options	      "Send all data"
-      receive_options	      "Receive all data"
-      default_value	      "[0]"
-      sample_time	      "qc_get_step_size"
-      active		      off
-      implementation	      "Use blocking I/O in a separate thread"
-      send_fifo_size	      "1000"
-      receive_fifo_size	      "1000"
-      send_priority	      "0"
-      receive_priority	      "0"
-      send_dimensions	      off
-      receive_dimensions      off
-      max_dimensions	      "-1"
-      data_type		      "Inherited via back propagation"
-      type_expr		      "BusObject"
     }
     Block {
       BlockType		      Reference
       Name		      "Stream Server"
       SID		      "963"
       Ports		      [2, 5]
-      Position		      [-355, 137, -255, 213]
+      Position		      [1355, 67, 1455, 143]
       ZOrder		      664
       AttributesFormatString  "\"tcpip://localhost:18000\""
       LibraryVersion	      "1.2097"
@@ -4010,18 +3786,18 @@ Model {
     Block {
       BlockType		      Reference
       Name		      "Stream Server1"
-      SID		      "986"
+      SID		      "978"
       Ports		      [2, 5]
-      Position		      [1320, 17, 1420, 93]
-      ZOrder		      684
-      AttributesFormatString  "\"tcpip://remotehost:19000\""
+      Position		      [1355, -58, 1455, 18]
+      ZOrder		      676
+      AttributesFormatString  "\"tcpip://remotehost:19001\""
       LibraryVersion	      "1.2097"
       SourceBlock	      "quarc_library/Communications/Basic/Stream Server"
       SourceType	      "Stream Server"
       SourceProductName	      "QUARC Targets"
       MultithreadedSim	      "auto"
       uri_source	      "Specify via dialog (do not evaluate)"
-      uri		      "tcpip://remotehost:19000"
+      uri		      "tcpip://remotehost:19001"
       apply_uri_to_all_configs on
       send_buffer_size	      "1460"
       receive_buffer_size     "1460"
@@ -4059,19 +3835,6 @@ Model {
       Position		      [625, 395, 635, 405]
       ZOrder		      5
       ShowName		      off
-    }
-    Block {
-      BlockType		      ToWorkspace
-      Name		      "To Workspace"
-      SID		      "982"
-      Ports		      [1]
-      Position		      [810, -10, 900, 20]
-      ZOrder		      680
-      VariableName	      "second"
-      MaxDataPoints	      "inf"
-      SaveFormat	      "Structure With Time"
-      FixptAsFi		      on
-      SampleTime	      "-1"
     }
     Block {
       BlockType		      Constant
@@ -4334,21 +4097,61 @@ Model {
       DstPort		      1
     }
     Line {
-      ZOrder		      329
-      SrcBlock		      "Stream Client"
-      SrcPort		      4
-      Points		      [-5, 0; 116, 0]
+      ZOrder		      13
+      SrcBlock		      "QBot 2e Diff Drive Kinematics"
+      SrcPort		      1
+      Points		      [19, 0]
       Branch {
-	ZOrder			335
-	Points			[0, -225]
-	DstBlock		"Scope10"
-	DstPort			1
+	ZOrder			234
+	Points			[0, 417; -1824, 0]
+	Branch {
+	  ZOrder		  281
+	  Points		  [-119, 0; 0, -162]
+	  DstBlock		  "Scope"
+	  DstPort		  2
+	}
+	Branch {
+	  ZOrder		  278
+	  Points		  [0, -292]
+	  Branch {
+	    ZOrder		    276
+	    DstBlock		    "Closed-Loop PID Autotuner"
+	    DstPort		    2
+	  }
+	  Branch {
+	    ZOrder		    275
+	    DstBlock		    "Sum"
+	    DstPort		    2
+	  }
+	}
       }
       Branch {
-	ZOrder			334
-	DstBlock		"Gain1"
+	ZOrder			304
+	Points			[0, -135]
+	Branch {
+	  ZOrder		  407
+	  Points		  [0, -125]
+	  DstBlock		  "Stream Server1"
+	  DstPort		  1
+	}
+	Branch {
+	  ZOrder		  364
+	  DstBlock		  "Stream Server"
+	  DstPort		  1
+	}
+      }
+      Branch {
+	ZOrder			152
+	DstBlock		"vC"
 	DstPort			1
       }
+    }
+    Line {
+      ZOrder		      339
+      SrcBlock		      "Manual Switch"
+      SrcPort		      1
+      DstBlock		      "Gain"
+      DstPort		      1
     }
     Line {
       ZOrder		      231
@@ -4464,176 +4267,37 @@ Model {
       ZOrder		      305
       SrcBlock		      "One1"
       SrcPort		      1
-      Points		      [20, 0; 0, 15]
       DstBlock		      "Stream Server"
       DstPort		      2
     }
     Line {
-      ZOrder		      306
-      SrcBlock		      "Stream Server"
+      ZOrder		      340
+      SrcBlock		      "Sine Wave"
       SrcPort		      1
-      Points		      [21, 0; 0, -255]
-      DstBlock		      "Scope1"
+      Points		      [58, 0; 0, 35]
+      DstBlock		      "Manual Switch"
       DstPort		      1
     }
     Line {
-      ZOrder		      307
-      SrcBlock		      "Stream Server"
-      SrcPort		      2
-      Points		      [41, 0; 0, -225]
-      DstBlock		      "Scope2"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      308
-      SrcBlock		      "Stream Server"
-      SrcPort		      3
-      Points		      [62, 0; 0, -195]
-      DstBlock		      "Scope3"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      309
-      SrcBlock		      "Stream Server"
-      SrcPort		      4
-      Points		      [83, 0; 0, -165]
-      DstBlock		      "Scope6"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      310
-      SrcBlock		      "Stream Server"
-      SrcPort		      5
-      Points		      [103, 0; 0, -135]
-      DstBlock		      "Scope5"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      330
-      SrcBlock		      "Stream Client"
+      ZOrder		      341
+      SrcBlock		      "Constant"
       SrcPort		      1
-      Points		      [29, 0; 0, -330]
-      DstBlock		      "Scope4"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      331
-      SrcBlock		      "Stream Client"
-      SrcPort		      2
-      Points		      [45, 0; 0, -295]
-      DstBlock		      "Scope7"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      332
-      SrcBlock		      "Stream Client"
-      SrcPort		      3
-      Points		      [62, 0; 0, -260]
-      DstBlock		      "Scope8"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      333
-      SrcBlock		      "Stream Client"
-      SrcPort		      5
-      Points		      [77, 0; 0, -185]
-      DstBlock		      "Scope9"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      337
-      SrcBlock		      "One2"
-      SrcPort		      1
-      DstBlock		      "Stream Client"
+      Points		      [52, 0; 0, -65]
+      DstBlock		      "Manual Switch"
       DstPort		      2
     }
     Line {
-      ZOrder		      375
-      SrcBlock		      "Sine Wave"
-      SrcPort		      1
-      DstBlock		      "Stream Client"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      13
-      SrcBlock		      "QBot 2e Diff Drive Kinematics"
-      SrcPort		      1
-      Points		      [19, 0]
-      Branch {
-	ZOrder			234
-	Points			[0, 417; -1824, 0]
-	Branch {
-	  ZOrder		  281
-	  Points		  [-84, 0; 0, -162]
-	  DstBlock		  "Scope"
-	  DstPort		  2
-	}
-	Branch {
-	  ZOrder		  278
-	  Points		  [0, -292]
-	  Branch {
-	    ZOrder		    276
-	    DstBlock		    "Closed-Loop PID Autotuner"
-	    DstPort		    2
-	  }
-	  Branch {
-	    ZOrder		    275
-	    DstBlock		    "Sum"
-	    DstPort		    2
-	  }
-	}
-      }
-      Branch {
-	ZOrder			304
-	Points			[0, -97]
-	Branch {
-	  ZOrder		  382
-	  Points		  [0, -88]
-	  DstBlock		  "Stream Server1"
-	  DstPort		  1
-	}
-	Branch {
-	  ZOrder		  378
-	  Points		  [-494, 0]
-	  Branch {
-	    ZOrder		    394
-	    Points		    [-1139, 0; 0, 32]
-	    DstBlock		    "Stream Server"
-	    DstPort		    1
-	  }
-	  Branch {
-	    ZOrder		    341
-	    Points		    [0, -118]
-	    DstBlock		    "To Workspace"
-	    DstPort		    1
-	  }
-	}
-      }
-      Branch {
-	ZOrder			152
-	DstBlock		"vC"
-	DstPort			1
-      }
-    }
-    Line {
-      ZOrder		      381
-      SrcBlock		      "Stream Server1"
-      SrcPort		      3
-      DstBlock		      "Scope11"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      383
-      SrcBlock		      "One3"
+      ZOrder		      373
+      SrcBlock		      "One2"
       SrcPort		      1
       DstBlock		      "Stream Server1"
       DstPort		      2
     }
     Line {
-      ZOrder		      396
-      SrcBlock		      "Gain1"
+      ZOrder		      404
+      SrcBlock		      "Gain"
       SrcPort		      1
-      Points		      [24, 0]
+      Points		      [20, 0; 0, 135]
       Branch {
 	ZOrder			146
 	Points			[0, 150]
@@ -4647,53 +4311,11 @@ Model {
       }
     }
     Annotation {
-      SID		      "981"
-      Name		      "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-      "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }"
-      "\n</style></head><body align=\"left\" style=\" font-family:'Arial'; font-size:10px; font-weight:400; font-style:"
-      "normal;\">\n<p align=\"left\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt"
-      "-block-indent:0; text-indent:0px;\"><span style=\" font-size:40px;\">from first</span></p></body></html>"
-      Position		      [-1004, 165, -847, 213]
-      InternalMargins	      [0, 0, 0, 0]
-      HorizontalAlignment     "left"
-      VerticalAlignment	      "top"
-      Interpreter	      "rich"
-      ZOrder		      -1
-    }
-    Annotation {
-      SID		      "980"
-      Name		      "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-      "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }"
-      "\n</style></head><body align=\"left\" style=\" font-family:'MS Shell Dlg 2'; font-size:40px; font-weight:400; fo"
-      "nt-style:normal;\">\n<p align=\"left\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right"
-      ":0px; -qt-block-indent:0; text-indent:0px;\"><span style=\" font-size:40px;\">to third</span></p></body></html>"
-      Position		      [-386, 34, -256, 84]
-      InternalMargins	      [0, 0, 0, 0]
-      HorizontalAlignment     "left"
-      VerticalAlignment	      "top"
-      Interpreter	      "rich"
-      ZOrder		      -2
-    }
-    Annotation {
       SID		      "805"
       Name		      "Max input for vL and vR commands: 0.7 m/sec"
       Position		      [389, 134, 596, 148]
       InternalMargins	      [0, 0, 0, 0]
       ZOrder		      -3
-    }
-    Annotation {
-      SID		      "987"
-      Name		      "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.0//EN\" \"http://www.w3.org/TR/REC-html40/strict.dtd\">\n"
-      "<html><head><meta name=\"qrichtext\" content=\"1\" /><style type=\"text/css\">\np, li { white-space: pre-wrap; }"
-      "\n</style></head><body align=\"left\" style=\" font-family:'Arial'; font-size:10px; font-weight:400; font-style:"
-      "normal;\">\n<p align=\"left\" style=\" margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt"
-      "-block-indent:0; text-indent:0px;\"><span style=\" font-size:40px;\">to hq</span></p></body></html>"
-      Position		      [1325, -44, 1415, 4]
-      InternalMargins	      [0, 0, 0, 0]
-      HorizontalAlignment     "left"
-      VerticalAlignment	      "top"
-      Interpreter	      "rich"
-      ZOrder		      -1
     }
   }
 }
@@ -4709,7 +4331,7 @@ MatData {
     "      .    N $   8    (     @         %    \"     $    !     0         %  0 $0    $   !5    :7-?=6YI<75E          "
     "!O;&1?8FQO8VL          &]L9%]N86UE            :7-?;6]D96Q?8VQO<VEN9P!I<U]D96QE=&5D              X    P    !@    @ "
     "   ) @        4    (     0    $    !          (  0 !    #@   #@    &    \"     8         !0    @    !     0    $  "
-    "       \"0    @        $@/3$0 X    X    !@    @    $          4    (     0    4    !         !     %    2$E,+3$   "
+    "       \"0    @         %(!*0 X    X    !@    @    $          4    (     0    4    !         !     %    2$E,+3$   "
     " .    ,     8    (    \"0(        %    \"     $    !     0         \"  $       X    P    !@    @    ) @        4  "
     "  (     0    $    !          (  0      #@   !AA   &    \"     (         !0    @    !     0    $         !0 $  \\  "
     "  !    /    &]L9%]B;V%R9%]T>7!E '$X                 '%B;W0R             '%B;W0R90                 .    .     8    "
@@ -5012,7 +4634,7 @@ MatData {
     "-T7VYA;64       X    8 0  !@    @    \"          4    (     0    $    !          4 !  -     0   \"<   !O;&1?;F%M90"
     "      :7-?9&5L971E9    &]B:F5C=%]B;&]C:P  #@   #@    &    \"     0         !0    @    !    !0    $         $     4"
     "   !(24PM,0    X    P    !@    @    ) @        4    (     0    $    !          (  0      #@   #@    &    \"     8 "
-    "        !0    @    !     0    $         \"0    @        $@/3$0 "
+    "        !0    @    !     0    $         \"0    @         %(!*0 "
   }
   DataRecord {
     Tag			    DataTag2
@@ -5020,7 +4642,7 @@ MatData {
     "-T7VYA;64       X    8 0  !@    @    \"          4    (     0    $    !          4 !  -     0   \"<   !O;&1?;F%M90"
     "      :7-?9&5L971E9    &]B:F5C=%]B;&]C:P  #@   #@    &    \"     0         !0    @    !    !0    $         $     4"
     "   !(24PM,0    X    P    !@    @    ) @        4    (     0    $    !          (  0      #@   #@    &    \"     8 "
-    "        !0    @    !     0    $         \"0    @        $@/3$0 "
+    "        !0    @    !     0    $         \"0    @         %(!*0 "
   }
 }
 #Finite State Machines
@@ -5031,7 +4653,7 @@ MatData {
 Stateflow {
   machine {
     id			    1
-    name		    "second"
+    name		    "autonomous_1"
     sfVersion		    80000041
     firstTarget		    28
   }

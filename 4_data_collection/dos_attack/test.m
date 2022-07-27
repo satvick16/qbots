@@ -1,0 +1,1 @@
+plot(ans(1, :), ans(2, :)); hold on; plot(ans(1, :), ans(3, :)); hold on; plot(ans(1, :), ans(4, :)); hold on; plot(ans(1, :), ans(5, :)); legend();
