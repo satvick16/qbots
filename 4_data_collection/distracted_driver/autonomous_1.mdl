@@ -1,5 +1,5 @@
 Model {
-  Name			  "autonomous_2_faulty"
+  Name			  "autonomous_1"
   Version		  10.3
   SavedCharacterEncoding  "windows-1252"
   ModelUUID		  "14454879-ccb1-4e09-a5e4-3f25db9c7a0c"
@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "9.112"
+    ComputedModelVersion    "9.90"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -19,71 +19,65 @@ Model {
     IsExportFunctionModel   0
     SimulinkSubDomainType   "Simulink"
     NumParameterArguments   0
-    NumExternalFileReferences 11
-    ExternalFileReference {
-      Reference		      "simulink/Sources/Band-Limited\nWhite Noise"
-      Path		      "autonomous_2_faulty/Band-Limited White Noise"
-      SID		      "1030"
-      Type		      "LIBRARY_BLOCK"
-    }
+    NumExternalFileReferences 10
     ExternalFileReference {
       Reference		      "slctrlblks/Closed-Loop PID Autotuner"
-      Path		      "autonomous_2_faulty/Closed-Loop PID Autotuner"
+      Path		      "autonomous_1/Closed-Loop PID Autotuner"
       SID		      "938"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "quarc_library/Continuous/Second-Order\nLow-Pass Filter"
-      Path		      "autonomous_2_faulty/Encoder_to_Velocity/Second-Order Low-Pass Filter2"
+      Path		      "autonomous_1/Encoder_to_Velocity/Second-Order Low-Pass Filter2"
       SID		      "850"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "quarc_library/Continuous/Second-Order\nLow-Pass Filter"
-      Path		      "autonomous_2_faulty/Encoder_to_Velocity1/Second-Order Low-Pass Filter2"
+      Path		      "autonomous_1/Encoder_to_Velocity1/Second-Order Low-Pass Filter2"
       SID		      "855"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "quarc_library/Data Acquisition/Generic/Configuration/HIL Initialize"
-      Path		      "autonomous_2_faulty/HIL Initialize"
+      Path		      "autonomous_1/HIL Initialize"
       SID		      "858"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "pid_lib/PID Controller"
-      Path		      "autonomous_2_faulty/PID Controller"
+      Path		      "autonomous_1/PID Controller"
       SID		      "917"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "quarc_library/Discrete/Bias Removal"
-      Path		      "autonomous_2_faulty/QBot 2e Basic Motor Commands and Sensor Measurement/Bias Removal"
+      Path		      "autonomous_1/QBot 2e Basic Motor Commands and Sensor Measurement/Bias Removal"
       SID		      "882"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "quarc_library/Data Acquisition/Generic/Immediate I//O/HIL Read"
-      Path		      "autonomous_2_faulty/QBot 2e Basic Motor Commands and Sensor Measurement/QBot2e_IO_Basic/HIL Read1"
+      Path		      "autonomous_1/QBot 2e Basic Motor Commands and Sensor Measurement/QBot2e_IO_Basic/HIL Read1"
       SID		      "890"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "quarc_library/Data Acquisition/Generic/Immediate I//O/HIL Write"
-      Path		      "autonomous_2_faulty/QBot 2e Basic Motor Commands and Sensor Measurement/QBot2e_IO_Basic/HIL Write"
+      Path		      "autonomous_1/QBot 2e Basic Motor Commands and Sensor Measurement/QBot2e_IO_Basic/HIL Write"
       SID		      "891"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
-      Reference		      "quarc_library/Communications/Basic/Stream Client"
-      Path		      "autonomous_2_faulty/Stream Client"
-      SID		      "987"
+      Reference		      "quarc_library/Communications/Basic/Stream Server"
+      Path		      "autonomous_1/Stream Server"
+      SID		      "963"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
       Reference		      "quarc_library/Communications/Basic/Stream Server"
-      Path		      "autonomous_2_faulty/Stream Server1"
-      SID		      "1013"
+      Path		      "autonomous_1/Stream Server1"
+      SID		      "978"
       Type		      "LIBRARY_BLOCK"
     }
     OrderedModelArguments   1
@@ -171,9 +165,9 @@ Model {
 	  ViewObjType		  "SimulinkTopLevel"
 	  LoadSaveID		  "0"
 	  Extents		  [1882.0, 791.0]
-	  ZoomFactor		  [0.74624303085761723]
-	  Offset		  [-1068.7606442152103, -189.23819907969255]
-	  SceneRectInView	  [-1068.7606442152103, -189.23819907969255, 2521.9666009304206, 1059.9763981593851]
+	  ZoomFactor		  [0.7662913438966189]
+	  Offset		  [-973.26981357874865, -225.37223359964935]
+	  SceneRectInView	  [-973.26981357874865, -225.37223359964935, 2455.9849396574973, 1032.2444671992987]
 	}
 	Object {
 	  $ObjectID		  6
@@ -237,19 +231,6 @@ Model {
 	Dimension		2
 	Object {
 	  $ObjectID		  11
-	  Type			  "Simulink:Editor:ReferencedFiles"
-	  ID			  "Referenced Files"
-	  Visible		  [0]
-	  CreateCallback	  ""
-	  UserData		  "{\"filterShowRefModels\":\"true\",\"filterShowRefSubs\":\"true\",\"filterShowOnlyDirtyFiles\":\"false\"}\n"
-	  Floating		  [0]
-	  DockPosition		  "Left"
-	  Width			  [640]
-	  Height		  [480]
-	  Minimized		  "Unset"
-	}
-	Object {
-	  $ObjectID		  12
 	  Type			  "GLUE2:PropertyInspector"
 	  ID			  "Property Inspector"
 	  Visible		  [0]
@@ -257,6 +238,19 @@ Model {
 	  UserData		  ""
 	  Floating		  [0]
 	  DockPosition		  "Right"
+	  Width			  [640]
+	  Height		  [480]
+	  Minimized		  "Unset"
+	}
+	Object {
+	  $ObjectID		  12
+	  Type			  "Simulink:Editor:ReferencedFiles"
+	  ID			  "Referenced Files"
+	  Visible		  [0]
+	  CreateCallback	  ""
+	  UserData		  "{\"filterShowRefModels\":\"true\",\"filterShowRefSubs\":\"true\",\"filterShowOnlyDirtyFiles\":\"false\"}\n"
+	  Floating		  [0]
+	  DockPosition		  "Left"
 	  Width			  [640]
 	  Height		  [480]
 	  Minimized		  "Unset"
@@ -288,9 +282,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Rohan"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Jul 27 11:41:29 2022"
-  RTWModifiedTimeStamp	  580822886
-  ModelVersionFormat	  "%<AutoIncrement:9.112>"
+  LastModifiedDate	  "Mon Jul 25 10:37:48 2022"
+  RTWModifiedTimeStamp	  580646234
+  ModelVersionFormat	  "%<AutoIncrement:9.90>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "none"
@@ -350,11 +344,11 @@ Model {
     $PropName		    "DataLoggingOverride"
     $ObjectID		    13
     $ClassName		    "Simulink.SimulationData.ModelLoggingInfo"
-    model_		    "autonomous_2_faulty"
+    model_		    "autonomous_1"
     Array {
       Type		      "Cell"
       Dimension		      1
-      Cell		      "autonomous_2_faulty"
+      Cell		      "autonomous_1"
       PropName		      "logAsSpecifiedByModels_"
     }
     Array {
@@ -1197,7 +1191,7 @@ Model {
 		  ExtModeStaticAllocSize  1000000
 		  ExtModeTransport	  0
 		  ExtModeMexFile	  "quarc_comm"
-		  ExtModeMexArgs	  "'-w -d /tmp -uri %u', 'tcpip://192.168.2.28:17004'"
+		  ExtModeMexArgs	  "'-w -d /tmp -uri %u', 'tcpip://192.168.2.32:17001'"
 		  ExtModeIntrfLevel	  "Level1"
 		  RTWCAPISignals	  off
 		  RTWCAPIParams		  off
@@ -1515,15 +1509,6 @@ Model {
       SampleTime	      "-1"
     }
     Block {
-      BlockType		      RateTransition
-      Integrity		      on
-      Deterministic	      on
-      InitialCondition	      "0"
-      OutPortSampleTimeOpt    "Specify"
-      OutPortSampleTimeMultiple	"1"
-      OutPortSampleTime	      "-1"
-    }
-    Block {
       BlockType		      S-Function
       FunctionName	      "system"
       SFunctionModules	      "''"
@@ -1538,6 +1523,19 @@ Model {
       BlockType		      SignalConversion
       ConversionOutput	      "Signal copy"
       OutDataTypeStr	      "Inherit: auto"
+    }
+    Block {
+      BlockType		      Sin
+      SineType		      "Time based"
+      TimeSource	      "Use simulation time"
+      Amplitude		      "1"
+      Bias		      "0"
+      Frequency		      "1"
+      Phase		      "0"
+      Samples		      "10"
+      Offset		      "0"
+      SampleTime	      "-1"
+      VectorParams1D	      on
     }
     Block {
       BlockType		      SubSystem
@@ -1600,7 +1598,7 @@ Model {
     }
   }
   System {
-    Name		    "autonomous_2_faulty"
+    Name		    "autonomous_1"
     Location		    [-8, -8, 1928, 1048]
     SystemRect		    [0.000000, 0.000000, 0.000000, 0.000000]
     Open		    on
@@ -1617,41 +1615,10 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "75"
+    ZoomFactor		    "77"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "1034"
+    SIDHighWatermark	    "982"
     SimulinkSubDomain	    "Simulink"
-    Block {
-      BlockType		      Sum
-      Name		      "Add"
-      SID		      "1027"
-      Ports		      [2, 1]
-      Position		      [-765, 242, -735, 273]
-      ZOrder		      725
-      IconShape		      "rectangular"
-    }
-    Block {
-      BlockType		      Reference
-      Name		      "Band-Limited\nWhite Noise"
-      SID		      "1030"
-      Ports		      [0, 1]
-      Position		      [-1040, 195, -1010, 225]
-      ZOrder		      728
-      LibraryVersion	      "1.480"
-      SourceBlock	      "simulink/Sources/Band-Limited\nWhite Noise"
-      SourceType	      "Band-Limited White Noise."
-      SourceProductBaseCode   "SL"
-      RTWMemSecFuncInitTerm   "Inherit from model"
-      RTWMemSecFuncExecute    "Inherit from model"
-      RTWMemSecDataConstants  "Inherit from model"
-      RTWMemSecDataInternal   "Inherit from model"
-      RTWMemSecDataParameters "Inherit from model"
-      ContentPreviewEnabled   on
-      Cov		      "[0.1]"
-      Ts		      "4"
-      seed		      "[23341]"
-      VectorParams1D	      on
-    }
     Block {
       BlockType		      BusSelector
       Name		      "Bus\nSelector"
@@ -1726,6 +1693,14 @@ Model {
       UseExternalTuningParams off
       OutputChoice	      "VariantCandD"
       SingleMultiRateVariant  "SingleSamplingRate"
+    }
+    Block {
+      BlockType		      Constant
+      Name		      "Constant"
+      SID		      "976"
+      Position		      [-950, 235, -920, 265]
+      ZOrder		      675
+      Value		      "0.3"
     }
     Block {
       BlockType		      Display
@@ -2205,25 +2180,17 @@ Model {
     Block {
       BlockType		      Gain
       Name		      "Gain"
-      SID		      "1023"
-      Position		      [-700, 295, -670, 325]
-      ZOrder		      721
+      SID		      "982"
+      Position		      [-745, 160, -715, 190]
+      ZOrder		      688
       Gain		      "1.18"
-    }
-    Block {
-      BlockType		      Gain
-      Name		      "Gain1"
-      SID		      "1031"
-      Position		      [-970, 195, -940, 225]
-      ZOrder		      730
-      Gain		      ".5"
     }
     Block {
       BlockType		      Reference
       Name		      "HIL Initialize"
       SID		      "858"
       Ports		      []
-      Position		      [460, 44, 544, 119]
+      Position		      [450, 9, 534, 84]
       ZOrder		      -13
       Priority		      "-99"
       AttributesFormatString  "%<object_name> (%<board_type>-%<board_number>)"
@@ -2452,6 +2419,13 @@ Model {
     }
     Block {
       BlockType		      ManualSwitch
+      Name		      "Manual Switch"
+      SID		      "975"
+      Position		      [-805, 157, -775, 193]
+      ZOrder		      674
+    }
+    Block {
+      BlockType		      ManualSwitch
       Name		      "Manual Switch1"
       SID		      "939"
       Position		      [-475, 437, -445, 473]
@@ -2547,17 +2521,17 @@ Model {
     Block {
       BlockType		      Constant
       Name		      "One1"
-      SID		      "1016"
-      Position		      [1275, 85, 1305, 115]
-      ZOrder		      714
+      SID		      "964"
+      Position		      [1280, 110, 1310, 140]
+      ZOrder		      665
       OutDataTypeStr	      "Inherit: Inherit via back propagation"
     }
     Block {
       BlockType		      Constant
       Name		      "One2"
       SID		      "981"
-      Position		      [-1050, 315, -1020, 345]
-      ZOrder		      733
+      Position		      [1280, -15, 1310, 15]
+      ZOrder		      687
       OutDataTypeStr	      "Inherit: Inherit via back propagation"
     }
     Block {
@@ -2586,7 +2560,7 @@ Model {
       FilterMethod	      "Forward Euler"
       ControllerParametersSource "internal"
       P			      "1"
-      I			      "2"
+      I			      "2.5"
       D			      "0"
       UseFilter		      on
       N			      "0"
@@ -3713,40 +3687,30 @@ Model {
       }
     }
     Block {
-      BlockType		      RateTransition
-      Name		      "Rate Transition"
-      SID		      "1029"
-      Position		      [-900, 189, -860, 231]
-      ZOrder		      727
-    }
-    Block {
       BlockType		      Scope
       Name		      "Scope"
-      SID		      "1012"
+      SID		      "928"
       Ports		      [2]
-      Position		      [-615, 451, -585, 484]
-      ZOrder		      711
+      Position		      [-665, 451, -635, 484]
+      ZOrder		      321
       ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
       "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
       "ources','WiredSimulink',true,'DataLoggingVariableName','ScopeData1'),extmgr.Configuration('Visuals','Time Domain"
-      "',true),extmgr.Configuration('Tools','Plot Navigation',true),extmgr.Configuration('Tools','Measurements',true)),"
-      "'Version','2021a')"
+      "',true,'SerializedDisplays',{struct('MinYLimReal','-.3','MaxYLimReal','.3','YLabelReal','','MinYLimMag','0.00000"
+      "','MaxYLimMag','0.29622','LegendVisibility','Off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 "
+      "0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.066666666666666"
+      "7;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.83137254901960"
+      "8 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.6509803"
+      "92156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',2,'LineN"
+      "ames',{{'Manual Switch','QBot 2e Diff Drive Kinematics/vC'}},'ShowContent',true,'Placement',1)},'DisplayProperty"
+      "Defaults',struct('MinYLimReal','-.3','MaxYLimReal','.3','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','0.2"
+      "9622','LegendVisibility','Off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor"
+      "',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[0.0745098039215686 0.623529411764706 1;1"
+      " 0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0.274509803921569 1;0.3921568627450"
+      "98 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863])),extmgr."
+      "Configuration('Tools','Plot Navigation',true,'OnceAtStop',false,'PreviousAutoscale','X'),extmgr.Configuration('T"
+      "ools','Measurements',true,'Version','2021a')),'Version','2021a','Position',[334 1406 436 292])"
       NumInputPorts	      "2"
-      Floating		      off
-    }
-    Block {
-      BlockType		      Scope
-      Name		      "Scope2"
-      SID		      "1034"
-      Ports		      [1]
-      Position		      [815, 64, 845, 96]
-      ZOrder		      736
-      ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
-      "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
-      "ources','WiredSimulink',true,'DataLoggingVariableName','ScopeData2'),extmgr.Configuration('Visuals','Time Domain"
-      "',true),extmgr.Configuration('Tools','Plot Navigation',true),extmgr.Configuration('Tools','Measurements',true)),"
-      "'Version','2021a')"
-      NumInputPorts	      "1"
       Floating		      off
     }
     Block {
@@ -3774,20 +3738,30 @@ Model {
       OverrideOpt	      off
     }
     Block {
+      BlockType		      Sin
+      Name		      "Sine Wave"
+      SID		      "974"
+      Ports		      [0, 1]
+      Position		      [-955, 115, -925, 145]
+      ZOrder		      673
+      Amplitude		      ".3"
+      SampleTime	      "0"
+    }
+    Block {
       BlockType		      Reference
-      Name		      "Stream Client"
-      SID		      "987"
+      Name		      "Stream Server"
+      SID		      "963"
       Ports		      [2, 5]
-      Position		      [-960, 272, -860, 348]
-      ZOrder		      732
-      AttributesFormatString  "\"tcpip://192.168.2.32:18000\""
+      Position		      [1355, 67, 1455, 143]
+      ZOrder		      664
+      AttributesFormatString  "\"tcpip://localhost:18000\""
       LibraryVersion	      "1.2097"
-      SourceBlock	      "quarc_library/Communications/Basic/Stream Client"
-      SourceType	      "Stream Client"
+      SourceBlock	      "quarc_library/Communications/Basic/Stream Server"
+      SourceType	      "Stream Server"
       SourceProductName	      "QUARC Targets"
       MultithreadedSim	      "auto"
       uri_source	      "Specify via dialog (do not evaluate)"
-      uri		      "tcpip://192.168.2.32:18000"
+      uri		      "tcpip://localhost:18000"
       apply_uri_to_all_configs on
       send_buffer_size	      "1460"
       receive_buffer_size     "1460"
@@ -3812,18 +3786,18 @@ Model {
     Block {
       BlockType		      Reference
       Name		      "Stream Server1"
-      SID		      "1013"
+      SID		      "978"
       Ports		      [2, 5]
-      Position		      [1325, 42, 1425, 118]
-      ZOrder		      712
-      AttributesFormatString  "\"tcpip://remotehost:19004\""
+      Position		      [1355, -58, 1455, 18]
+      ZOrder		      676
+      AttributesFormatString  "\"tcpip://remotehost:19001\""
       LibraryVersion	      "1.2097"
       SourceBlock	      "quarc_library/Communications/Basic/Stream Server"
       SourceType	      "Stream Server"
       SourceProductName	      "QUARC Targets"
       MultithreadedSim	      "auto"
       uri_source	      "Specify via dialog (do not evaluate)"
-      uri		      "tcpip://remotehost:19004"
+      uri		      "tcpip://remotehost:19001"
       apply_uri_to_all_configs on
       send_buffer_size	      "1460"
       receive_buffer_size     "1460"
@@ -3868,15 +3842,6 @@ Model {
       SID		      "942"
       Position		      [-535, 395, -505, 425]
       ZOrder		      334
-      Value		      "0"
-      OutDataTypeStr	      "Inherit: Inherit via back propagation"
-    }
-    Block {
-      BlockType		      Constant
-      Name		      "Zero1"
-      SID		      "1024"
-      Position		      [-1050, 275, -1020, 305]
-      ZOrder		      734
       Value		      "0"
       OutDataTypeStr	      "Inherit: Inherit via back propagation"
     }
@@ -4096,13 +4061,13 @@ Model {
       SrcPort		      1
       Points		      [54, 0]
       Branch {
-	ZOrder			489
+	ZOrder			200
 	Points			[0, 265]
 	DstBlock		"QBot 2e Diff Drive Kinematics2"
 	DstPort			1
       }
       Branch {
-	ZOrder			488
+	ZOrder			195
 	DstBlock		"QBot 2e Basic Motor Commands\nand Sensor Measurement"
 	DstPort			1
       }
@@ -4129,6 +4094,63 @@ Model {
       SrcBlock		      "QBot 2e Basic Motor Commands\nand Sensor Measurement"
       SrcPort		      4
       DstBlock		      "Terminator"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      13
+      SrcBlock		      "QBot 2e Diff Drive Kinematics"
+      SrcPort		      1
+      Points		      [19, 0]
+      Branch {
+	ZOrder			234
+	Points			[0, 417; -1824, 0]
+	Branch {
+	  ZOrder		  281
+	  Points		  [-119, 0; 0, -162]
+	  DstBlock		  "Scope"
+	  DstPort		  2
+	}
+	Branch {
+	  ZOrder		  278
+	  Points		  [0, -292]
+	  Branch {
+	    ZOrder		    276
+	    DstBlock		    "Closed-Loop PID Autotuner"
+	    DstPort		    2
+	  }
+	  Branch {
+	    ZOrder		    275
+	    DstBlock		    "Sum"
+	    DstPort		    2
+	  }
+	}
+      }
+      Branch {
+	ZOrder			304
+	Points			[0, -135]
+	Branch {
+	  ZOrder		  407
+	  Points		  [0, -125]
+	  DstBlock		  "Stream Server1"
+	  DstPort		  1
+	}
+	Branch {
+	  ZOrder		  364
+	  DstBlock		  "Stream Server"
+	  DstPort		  1
+	}
+      }
+      Branch {
+	ZOrder			152
+	DstBlock		"vC"
+	DstPort			1
+      }
+    }
+    Line {
+      ZOrder		      339
+      SrcBlock		      "Manual Switch"
+      SrcPort		      1
+      DstBlock		      "Gain"
       DstPort		      1
     }
     Line {
@@ -4242,131 +4264,51 @@ Model {
       DstPort		      1
     }
     Line {
-      ZOrder		      13
-      SrcBlock		      "QBot 2e Diff Drive Kinematics"
+      ZOrder		      305
+      SrcBlock		      "One1"
       SrcPort		      1
-      Points		      [19, 0]
-      Branch {
-	ZOrder			364
-	Points			[0, -66]
-	Branch {
-	  ZOrder		  537
-	  Points		  [-463, 0; 0, -74]
-	  DstBlock		  "Scope2"
-	  DstPort		  1
-	}
-	Branch {
-	  ZOrder		  536
-	  Points		  [0, -94]
-	  DstBlock		  "Stream Server1"
-	  DstPort		  1
-	}
-      }
-      Branch {
-	ZOrder			234
-	Points			[0, 417; -1824, 0]
-	Branch {
-	  ZOrder		  401
-	  Points		  [0, -292]
-	  Branch {
-	    ZOrder		    276
-	    DstBlock		    "Closed-Loop PID Autotuner"
-	    DstPort		    2
-	  }
-	  Branch {
-	    ZOrder		    275
-	    DstBlock		    "Sum"
-	    DstPort		    2
-	  }
-	}
-	Branch {
-	  ZOrder		  399
-	  Points		  [-69, 0; 0, -162]
-	  DstBlock		  "Scope"
-	  DstPort		  2
-	}
-      }
-      Branch {
-	ZOrder			152
-	DstBlock		"vC"
-	DstPort			1
-      }
+      DstBlock		      "Stream Server"
+      DstPort		      2
     }
     Line {
-      ZOrder		      408
-      SrcBlock		      "One1"
+      ZOrder		      340
+      SrcBlock		      "Sine Wave"
+      SrcPort		      1
+      Points		      [58, 0; 0, 35]
+      DstBlock		      "Manual Switch"
+      DstPort		      1
+    }
+    Line {
+      ZOrder		      341
+      SrcBlock		      "Constant"
+      SrcPort		      1
+      Points		      [52, 0; 0, -65]
+      DstBlock		      "Manual Switch"
+      DstPort		      2
+    }
+    Line {
+      ZOrder		      373
+      SrcBlock		      "One2"
       SrcPort		      1
       DstBlock		      "Stream Server1"
       DstPort		      2
     }
     Line {
-      ZOrder		      467
+      ZOrder		      404
       SrcBlock		      "Gain"
       SrcPort		      1
-      Points		      [28, 0]
+      Points		      [20, 0; 0, 135]
       Branch {
-	ZOrder			398
+	ZOrder			146
 	Points			[0, 150]
 	DstBlock		"Scope"
 	DstPort			1
       }
       Branch {
-	ZOrder			355
+	ZOrder			145
 	DstBlock		"Sum"
 	DstPort			1
       }
-    }
-    Line {
-      ZOrder		      529
-      SrcBlock		      "Band-Limited\nWhite Noise"
-      SrcPort		      1
-      DstBlock		      "Gain1"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      493
-      SrcBlock		      "Add"
-      SrcPort		      1
-      Points		      [12, 0; 0, 50]
-      DstBlock		      "Gain"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      527
-      SrcBlock		      "Rate Transition"
-      SrcPort		      1
-      Points		      [-5, 0; 65, 0; 0, 40]
-      DstBlock		      "Add"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      530
-      SrcBlock		      "Gain1"
-      SrcPort		      1
-      DstBlock		      "Rate Transition"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      533
-      SrcBlock		      "One2"
-      SrcPort		      1
-      DstBlock		      "Stream Client"
-      DstPort		      2
-    }
-    Line {
-      ZOrder		      534
-      SrcBlock		      "Zero1"
-      SrcPort		      1
-      DstBlock		      "Stream Client"
-      DstPort		      1
-    }
-    Line {
-      ZOrder		      558
-      SrcBlock		      "Stream Client"
-      SrcPort		      4
-      Points		      [-5, 0; 68, 0; 0, -60]
-      DstBlock		      "Add"
-      DstPort		      2
     }
     Annotation {
       SID		      "805"
@@ -4389,7 +4331,7 @@ MatData {
     "      .    N $   8    (     @         %    \"     $    !     0         %  0 $0    $   !5    :7-?=6YI<75E          "
     "!O;&1?8FQO8VL          &]L9%]N86UE            :7-?;6]D96Q?8VQO<VEN9P!I<U]D96QE=&5D              X    P    !@    @ "
     "   ) @        4    (     0    $    !          (  0 !    #@   #@    &    \"     8         !0    @    !     0    $  "
-    "       \"0    @         #(!+0 X    X    !@    @    $          4    (     0    4    !         !     %    2$E,+3$   "
+    "       \"0    @         %(!*0 X    X    !@    @    $          4    (     0    4    !         !     %    2$E,+3$   "
     " .    ,     8    (    \"0(        %    \"     $    !     0         \"  $       X    P    !@    @    ) @        4  "
     "  (     0    $    !          (  0      #@   !AA   &    \"     (         !0    @    !     0    $         !0 $  \\  "
     "  !    /    &]L9%]B;V%R9%]T>7!E '$X                 '%B;W0R             '%B;W0R90                 .    .     8    "
@@ -4692,7 +4634,7 @@ MatData {
     "-T7VYA;64       X    8 0  !@    @    \"          4    (     0    $    !          4 !  -     0   \"<   !O;&1?;F%M90"
     "      :7-?9&5L971E9    &]B:F5C=%]B;&]C:P  #@   #@    &    \"     0         !0    @    !    !0    $         $     4"
     "   !(24PM,0    X    P    !@    @    ) @        4    (     0    $    !          (  0      #@   #@    &    \"     8 "
-    "        !0    @    !     0    $         \"0    @         #(!+0 "
+    "        !0    @    !     0    $         \"0    @         %(!*0 "
   }
   DataRecord {
     Tag			    DataTag2
@@ -4700,7 +4642,7 @@ MatData {
     "-T7VYA;64       X    8 0  !@    @    \"          4    (     0    $    !          4 !  -     0   \"<   !O;&1?;F%M90"
     "      :7-?9&5L971E9    &]B:F5C=%]B;&]C:P  #@   #@    &    \"     0         !0    @    !    !0    $         $     4"
     "   !(24PM,0    X    P    !@    @    ) @        4    (     0    $    !          (  0      #@   #@    &    \"     8 "
-    "        !0    @    !     0    $         \"0    @         #(!+0 "
+    "        !0    @    !     0    $         \"0    @         %(!*0 "
   }
 }
 #Finite State Machines
@@ -4711,7 +4653,7 @@ MatData {
 Stateflow {
   machine {
     id			    1
-    name		    "autonomous_2_faulty"
+    name		    "autonomous_1"
     sfVersion		    80000041
     firstTarget		    28
   }
