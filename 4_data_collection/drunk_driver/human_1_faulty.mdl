@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "9.112"
+    ComputedModelVersion    "9.115"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -265,19 +265,6 @@ Model {
 	Dimension		2
 	Object {
 	  $ObjectID		  16
-	  Type			  "GLUE2:PropertyInspector"
-	  ID			  "Property Inspector"
-	  Visible		  [0]
-	  CreateCallback	  ""
-	  UserData		  ""
-	  Floating		  [0]
-	  DockPosition		  "Right"
-	  Width			  [640]
-	  Height		  [480]
-	  Minimized		  "Unset"
-	}
-	Object {
-	  $ObjectID		  17
 	  Type			  "Simulink:Editor:ReferencedFiles"
 	  ID			  "Referenced Files"
 	  Visible		  [0]
@@ -285,6 +272,19 @@ Model {
 	  UserData		  "{\"filterShowRefModels\":\"true\",\"filterShowRefSubs\":\"true\",\"filterShowOnlyDirtyFiles\":\"false\"}\n"
 	  Floating		  [0]
 	  DockPosition		  "Left"
+	  Width			  [640]
+	  Height		  [480]
+	  Minimized		  "Unset"
+	}
+	Object {
+	  $ObjectID		  17
+	  Type			  "GLUE2:PropertyInspector"
+	  ID			  "Property Inspector"
+	  Visible		  [0]
+	  CreateCallback	  ""
+	  UserData		  ""
+	  Floating		  [0]
+	  DockPosition		  "Right"
 	  Width			  [640]
 	  Height		  [480]
 	  Minimized		  "Unset"
@@ -316,9 +316,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Rohan"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Mon Jul 25 10:35:57 2022"
-  RTWModifiedTimeStamp	  580646155
-  ModelVersionFormat	  "%<AutoIncrement:9.112>"
+  LastModifiedDate	  "Tue Aug 16 12:24:23 2022"
+  RTWModifiedTimeStamp	  582553462
+  ModelVersionFormat	  "%<AutoIncrement:9.115>"
   SampleTimeColors	  on
   SampleTimeAnnotations	  on
   LibraryLinkDisplay	  "none"
@@ -4160,7 +4160,7 @@ Model {
       Position		      [395, 75, 425, 105]
       ZOrder		      399
       ForegroundColor	      "green"
-      Variance		      ".01"
+      Variance		      ".1"
       SampleTime	      "1"
     }
     Block {
@@ -4218,34 +4218,6 @@ Model {
       "650980392156863])),extmgr.Configuration('Tools','Plot Navigation',true,'PreviousAutoscale','XY'),extmgr.Configur"
       "ation('Tools','Measurements',true,'Version','2021a')),'Version','2021a','Position',[1 41 1920 963])"
       NumInputPorts	      "4"
-      Floating		      off
-    }
-    Block {
-      BlockType		      Scope
-      Name		      "Scope1"
-      SID		      "407"
-      Ports		      [1]
-      Position		      [645, 54, 675, 86]
-      ZOrder		      400
-      ForegroundColor	      "red"
-      ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
-      "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
-      "ources','WiredSimulink',true),extmgr.Configuration('Visuals','Time Domain',true,'SerializedDisplays',{struct('Mi"
-      "nYLimReal','-0.0375','MaxYLimReal','0.3375','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','0.3375','Legend"
-      "Visibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.68627450"
-      "9803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.0666666666666667;0.0745098039215686 0.623529411"
-      "764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.831372549019608 0.0745098039215686;0.717647058"
-      "823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863],'Title','%<SignalLabel"
-      ">','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',1,'LineNames',{{'Saturation'}},'ShowCont"
-      "ent',true,'Placement',1)},'DisplayPropertyDefaults',struct('MinYLimReal','-0.0375','MaxYLimReal','0.3375','YLabe"
-      "lReal','','MinYLimMag','0.00000','MaxYLimMag','0.3375','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotM"
-      "agPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'Colo"
-      "rOrder',[0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.71"
-      "7647058823529 0.274509803921569 1;0.392156862745098 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;"
-      "1 0.0745098039215686 0.650980392156863])),extmgr.Configuration('Tools','Plot Navigation',true,'PreviousAutoscale"
-      "','XY'),extmgr.Configuration('Tools','Measurements',true,'Version','2021a')),'Version','2021a','Position',[676 2"
-      "48 560 420])"
-      NumInputPorts	      "1"
       Floating		      off
     }
     Block {
@@ -4687,19 +4659,9 @@ Model {
       ZOrder		      235
       SrcBlock		      "Saturation"
       SrcPort		      1
-      Points		      [20, 0]
-      Branch {
-	ZOrder			290
-	Points			[0, 70]
-	DstBlock		"Add2"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			289
-	Points			[0, -20]
-	DstBlock		"Scope1"
-	DstPort			1
-      }
+      Points		      [20, 0; 0, 70]
+      DstBlock		      "Add2"
+      DstPort		      1
     }
     Line {
       ZOrder		      238
@@ -4852,7 +4814,7 @@ MatData {
     "   !          (  0      #@   +@!   &    \"     (         !0    @    !     0    $         !0 $ !$    !    50   &ES7"
     "W5N:7%U90          ;VQD7V)L;V-K          !O;&1?;F%M90           &ES7VUO9&5L7V-L;W-I;F< :7-?9&5L971E9              "
     ".    ,     8    (    \"0(        %    \"     $    !     0         \"  $  0    X    X    !@    @    &          4   "
-    " (     0    $    !          D    (        !(#3SD .    .     8    (    !          %    \"     $    %     0         "
+    " (     0    $    !          D    (        # #%PT .    .     8    (    !          %    \"     $    %     0         "
     "0    !0   $A)3\"TQ    #@   #     &    \"     D\"        !0    @    !     0    $          @ !       .    ,     8   "
     " (    \"0(        %    \"     $    !     0         \"  $       X    880  !@    @    \"          4    (     0    $ "
     "   !          4 !  /     0   #P   !O;&1?8F]A<F1?='EP90!Q.                 !Q8F]T,@            !Q8F]T,F4           "
@@ -5156,7 +5118,7 @@ MatData {
     "-T7VYA;64       X    8 0  !@    @    \"          4    (     0    $    !          4 !  -     0   \"<   !O;&1?;F%M90"
     "      :7-?9&5L971E9    &]B:F5C=%]B;&]C:P  #@   #@    &    \"     0         !0    @    !    !0    $         $     4"
     "   !(24PM,0    X    P    !@    @    ) @        4    (     0    $    !          (  0      #@   #@    &    \"     8 "
-    "        !0    @    !     0    $         \"0    @        $@-/.0 "
+    "        !0    @    !     0    $         \"0    @        , ,7#0 "
   }
   DataRecord {
     Tag			    DataTag2
@@ -5164,7 +5126,7 @@ MatData {
     "-T7VYA;64       X    8 0  !@    @    \"          4    (     0    $    !          4 !  -     0   \"<   !O;&1?;F%M90"
     "      :7-?9&5L971E9    &]B:F5C=%]B;&]C:P  #@   #@    &    \"     0         !0    @    !    !0    $         $     4"
     "   !(24PM,0    X    P    !@    @    ) @        4    (     0    $    !          (  0      #@   #@    &    \"     8 "
-    "        !0    @    !     0    $         \"0    @        $@-/.0 "
+    "        !0    @    !     0    $         \"0    @        , ,7#0 "
   }
 }
 #Finite State Machines

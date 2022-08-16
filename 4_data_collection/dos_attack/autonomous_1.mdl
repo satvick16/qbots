@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "9.89"
+    ComputedModelVersion    "9.90"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -282,9 +282,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Rohan"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Jul 20 14:18:56 2022"
-  RTWModifiedTimeStamp	  580227534
-  ModelVersionFormat	  "%<AutoIncrement:9.89>"
+  LastModifiedDate	  "Mon Aug 15 09:47:53 2022"
+  RTWModifiedTimeStamp	  582457670
+  ModelVersionFormat	  "%<AutoIncrement:9.90>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "none"
@@ -1191,7 +1191,7 @@ Model {
 		  ExtModeStaticAllocSize  1000000
 		  ExtModeTransport	  0
 		  ExtModeMexFile	  "quarc_comm"
-		  ExtModeMexArgs	  "'-w -d /tmp -uri %u', 'tcpip://192.168.2.32:17002'"
+		  ExtModeMexArgs	  "'-w -d /tmp -uri %u', 'tcpip://192.168.2.32:17001'"
 		  ExtModeIntrfLevel	  "Level1"
 		  RTWCAPISignals	  off
 		  RTWCAPIParams		  off
@@ -4130,13 +4130,12 @@ Model {
 	Points			[0, -135]
 	Branch {
 	  ZOrder		  407
-	  Points		  [0, -125; 101, 0]
+	  Points		  [0, -125]
 	  DstBlock		  "Stream Server1"
 	  DstPort		  1
 	}
 	Branch {
 	  ZOrder		  364
-	  Points		  [101, 0]
 	  DstBlock		  "Stream Server"
 	  DstPort		  1
 	}
@@ -4195,10 +4194,6 @@ Model {
     }
     Line {
       Name		      "<P>"
-      FontName		      "Arial"
-      FontSize		      9
-      FontWeight	      "normal"
-      FontAngle		      "normal"
       ZOrder		      244
       Labels		      [0, 0]
       SrcBlock		      "Bus\nSelector"
@@ -4209,10 +4204,6 @@ Model {
     }
     Line {
       Name		      "<I>"
-      FontName		      "Arial"
-      FontSize		      9
-      FontWeight	      "normal"
-      FontAngle		      "normal"
       ZOrder		      245
       Labels		      [0, 0]
       SrcBlock		      "Bus\nSelector"
@@ -4222,10 +4213,6 @@ Model {
     }
     Line {
       Name		      "<D>"
-      FontName		      "Arial"
-      FontSize		      9
-      FontWeight	      "normal"
-      FontAngle		      "normal"
       ZOrder		      246
       Labels		      [0, 0]
       SrcBlock		      "Bus\nSelector"
@@ -4344,7 +4331,7 @@ MatData {
     "      .    N $   8    (     @         %    \"     $    !     0         %  0 $0    $   !5    :7-?=6YI<75E          "
     "!O;&1?8FQO8VL          &]L9%]N86UE            :7-?;6]D96Q?8VQO<VEN9P!I<U]D96QE=&5D              X    P    !@    @ "
     "   ) @        4    (     0    $    !          (  0 !    #@   #@    &    \"     8         !0    @    !     0    $  "
-    "       \"0    @         5(!*0 X    X    !@    @    $          4    (     0    4    !         !     %    2$E,+3$   "
+    "       \"0    @         ! !+0 X    X    !@    @    $          4    (     0    4    !         !     %    2$E,+3$   "
     " .    ,     8    (    \"0(        %    \"     $    !     0         \"  $       X    P    !@    @    ) @        4  "
     "  (     0    $    !          (  0      #@   !AA   &    \"     (         !0    @    !     0    $         !0 $  \\  "
     "  !    /    &]L9%]B;V%R9%]T>7!E '$X                 '%B;W0R             '%B;W0R90                 .    .     8    "
@@ -4647,7 +4634,7 @@ MatData {
     "-T7VYA;64       X    8 0  !@    @    \"          4    (     0    $    !          4 !  -     0   \"<   !O;&1?;F%M90"
     "      :7-?9&5L971E9    &]B:F5C=%]B;&]C:P  #@   #@    &    \"     0         !0    @    !    !0    $         $     4"
     "   !(24PM,0    X    P    !@    @    ) @        4    (     0    $    !          (  0      #@   #@    &    \"     8 "
-    "        !0    @    !     0    $         \"0    @         5(!*0 "
+    "        !0    @    !     0    $         \"0    @         ! !+0 "
   }
   DataRecord {
     Tag			    DataTag2
@@ -4655,7 +4642,7 @@ MatData {
     "-T7VYA;64       X    8 0  !@    @    \"          4    (     0    $    !          4 !  -     0   \"<   !O;&1?;F%M90"
     "      :7-?9&5L971E9    &]B:F5C=%]B;&]C:P  #@   #@    &    \"     0         !0    @    !    !0    $         $     4"
     "   !(24PM,0    X    P    !@    @    ) @        4    (     0    $    !          (  0      #@   #@    &    \"     8 "
-    "        !0    @    !     0    $         \"0    @         5(!*0 "
+    "        !0    @    !     0    $         \"0    @         ! !+0 "
   }
 }
 #Finite State Machines

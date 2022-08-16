@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "9.89"
+    ComputedModelVersion    "9.94"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -166,8 +166,8 @@ Model {
 	  LoadSaveID		  "0"
 	  Extents		  [1882.0, 791.0]
 	  ZoomFactor		  [0.7662913438966189]
-	  Offset		  [-973.26981357874865, -225.37223359964935]
-	  SceneRectInView	  [-973.26981357874865, -225.37223359964935, 2455.9849396574973, 1032.2444671992987]
+	  Offset		  [-973.26981357874865, -233.37223359964935]
+	  SceneRectInView	  [-973.26981357874865, -233.37223359964935, 2455.9849396574973, 1032.2444671992987]
 	}
 	Object {
 	  $ObjectID		  6
@@ -282,9 +282,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Rohan"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Wed Jul 20 14:18:56 2022"
-  RTWModifiedTimeStamp	  580227534
-  ModelVersionFormat	  "%<AutoIncrement:9.89>"
+  LastModifiedDate	  "Wed Aug 10 10:03:25 2022"
+  RTWModifiedTimeStamp	  582026603
+  ModelVersionFormat	  "%<AutoIncrement:9.94>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "none"
@@ -1191,7 +1191,7 @@ Model {
 		  ExtModeStaticAllocSize  1000000
 		  ExtModeTransport	  0
 		  ExtModeMexFile	  "quarc_comm"
-		  ExtModeMexArgs	  "'-w -d /tmp -uri %u', 'tcpip://192.168.2.32:17002'"
+		  ExtModeMexArgs	  "'-w -d /tmp -uri %u', 'tcpip://192.168.2.32:17001'"
 		  ExtModeIntrfLevel	  "Level1"
 		  RTWCAPISignals	  off
 		  RTWCAPIParams		  off
@@ -1617,7 +1617,7 @@ Model {
     ShowPageBoundaries	    off
     ZoomFactor		    "77"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "982"
+    SIDHighWatermark	    "983"
     SimulinkSubDomain	    "Simulink"
     Block {
       BlockType		      BusSelector
@@ -3714,6 +3714,33 @@ Model {
       Floating		      off
     }
     Block {
+      BlockType		      Scope
+      Name		      "Scope1"
+      SID		      "983"
+      Ports		      [2]
+      Position		      [50, -74, 80, -41]
+      ZOrder		      689
+      ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
+      "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
+      "ources','WiredSimulink',true,'DataLoggingVariableName','ScopeData1'),extmgr.Configuration('Visuals','Time Domain"
+      "',true,'SerializedDisplays',{struct('MinYLimReal','-0.16111','MaxYLimReal','1.45003','YLabelReal','','MinYLimMag"
+      "','0.00000','MaxYLimMag','1.45003','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,'Axes"
+      "Color',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.06666"
+      "66666666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.8313"
+      "72549019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686"
+      " 0.650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines"
+      "',2,'LineNames',{{'Closed-Loop PID Autotuner/1','QBot 2e Diff Drive Kinematics/vC'}},'ShowContent',true,'Placeme"
+      "nt',1)},'DisplayPropertyDefaults',struct('MinYLimReal','-0.16111','MaxYLimReal','1.45003','YLabelReal','','MinYL"
+      "imMag','0.00000','MaxYLimMag','1.45003','LegendVisibility','off','XGrid',true,'YGrid',true,'PlotMagPhase',false,"
+      "'AxesColor',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[0.0745"
+      "098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0"
+      ".274509803921569 1;0.392156862745098 0.831372549019608 0.0745098039215686;0.0588235294117647 1 1;1 0.07450980392"
+      "15686 0.650980392156863])),extmgr.Configuration('Tools','Plot Navigation',true),extmgr.Configuration('Tools','Me"
+      "asurements',true,'Version','2021a')),'Version','2021a')"
+      NumInputPorts	      "2"
+      Floating		      off
+    }
+    Block {
       BlockType		      SignalConversion
       Name		      "Signal Copy"
       SID		      "946"
@@ -4102,6 +4129,31 @@ Model {
       SrcPort		      1
       Points		      [19, 0]
       Branch {
+	ZOrder			435
+	Points			[0, -69]
+	Branch {
+	  ZOrder		  434
+	  Points		  [-1253, 0; 0, -201]
+	  DstBlock		  "Scope1"
+	  DstPort		  2
+	}
+	Branch {
+	  ZOrder		  304
+	  Points		  [0, -66]
+	  Branch {
+	    ZOrder		    407
+	    Points		    [0, -125]
+	    DstBlock		    "Stream Server1"
+	    DstPort		    1
+	  }
+	  Branch {
+	    ZOrder		    364
+	    DstBlock		    "Stream Server"
+	    DstPort		    1
+	  }
+	}
+      }
+      Branch {
 	ZOrder			234
 	Points			[0, 417; -1824, 0]
 	Branch {
@@ -4123,22 +4175,6 @@ Model {
 	    DstBlock		    "Sum"
 	    DstPort		    2
 	  }
-	}
-      }
-      Branch {
-	ZOrder			304
-	Points			[0, -135]
-	Branch {
-	  ZOrder		  407
-	  Points		  [0, -125; 101, 0]
-	  DstBlock		  "Stream Server1"
-	  DstPort		  1
-	}
-	Branch {
-	  ZOrder		  364
-	  Points		  [101, 0]
-	  DstBlock		  "Stream Server"
-	  DstPort		  1
 	}
       }
       Branch {
@@ -4195,10 +4231,6 @@ Model {
     }
     Line {
       Name		      "<P>"
-      FontName		      "Arial"
-      FontSize		      9
-      FontWeight	      "normal"
-      FontAngle		      "normal"
       ZOrder		      244
       Labels		      [0, 0]
       SrcBlock		      "Bus\nSelector"
@@ -4209,10 +4241,6 @@ Model {
     }
     Line {
       Name		      "<I>"
-      FontName		      "Arial"
-      FontSize		      9
-      FontWeight	      "normal"
-      FontAngle		      "normal"
       ZOrder		      245
       Labels		      [0, 0]
       SrcBlock		      "Bus\nSelector"
@@ -4222,10 +4250,6 @@ Model {
     }
     Line {
       Name		      "<D>"
-      FontName		      "Arial"
-      FontSize		      9
-      FontWeight	      "normal"
-      FontAngle		      "normal"
       ZOrder		      246
       Labels		      [0, 0]
       SrcBlock		      "Bus\nSelector"
@@ -4310,17 +4334,27 @@ Model {
       ZOrder		      404
       SrcBlock		      "Gain"
       SrcPort		      1
-      Points		      [20, 0; 0, 135]
+      Points		      [17, 0]
       Branch {
-	ZOrder			146
-	Points			[0, 150]
-	DstBlock		"Scope"
+	ZOrder			437
+	Points			[0, -240]
+	DstBlock		"Scope1"
 	DstPort			1
       }
       Branch {
-	ZOrder			145
-	DstBlock		"Sum"
-	DstPort			1
+	ZOrder			436
+	Points			[3, 0; 0, 135]
+	Branch {
+	  ZOrder		  146
+	  Points		  [0, 150]
+	  DstBlock		  "Scope"
+	  DstPort		  1
+	}
+	Branch {
+	  ZOrder		  145
+	  DstBlock		  "Sum"
+	  DstPort		  1
+	}
       }
     }
     Annotation {
@@ -4344,7 +4378,7 @@ MatData {
     "      .    N $   8    (     @         %    \"     $    !     0         %  0 $0    $   !5    :7-?=6YI<75E          "
     "!O;&1?8FQO8VL          &]L9%]N86UE            :7-?;6]D96Q?8VQO<VEN9P!I<U]D96QE=&5D              X    P    !@    @ "
     "   ) @        4    (     0    $    !          (  0 !    #@   #@    &    \"     8         !0    @    !     0    $  "
-    "       \"0    @         5(!*0 X    X    !@    @    $          4    (     0    4    !         !     %    2$E,+3$   "
+    "       \"0    @         ! !+0 X    X    !@    @    $          4    (     0    4    !         !     %    2$E,+3$   "
     " .    ,     8    (    \"0(        %    \"     $    !     0         \"  $       X    P    !@    @    ) @        4  "
     "  (     0    $    !          (  0      #@   !AA   &    \"     (         !0    @    !     0    $         !0 $  \\  "
     "  !    /    &]L9%]B;V%R9%]T>7!E '$X                 '%B;W0R             '%B;W0R90                 .    .     8    "
@@ -4647,7 +4681,7 @@ MatData {
     "-T7VYA;64       X    8 0  !@    @    \"          4    (     0    $    !          4 !  -     0   \"<   !O;&1?;F%M90"
     "      :7-?9&5L971E9    &]B:F5C=%]B;&]C:P  #@   #@    &    \"     0         !0    @    !    !0    $         $     4"
     "   !(24PM,0    X    P    !@    @    ) @        4    (     0    $    !          (  0      #@   #@    &    \"     8 "
-    "        !0    @    !     0    $         \"0    @         5(!*0 "
+    "        !0    @    !     0    $         \"0    @         ! !+0 "
   }
   DataRecord {
     Tag			    DataTag2
@@ -4655,7 +4689,7 @@ MatData {
     "-T7VYA;64       X    8 0  !@    @    \"          4    (     0    $    !          4 !  -     0   \"<   !O;&1?;F%M90"
     "      :7-?9&5L971E9    &]B:F5C=%]B;&]C:P  #@   #@    &    \"     0         !0    @    !    !0    $         $     4"
     "   !(24PM,0    X    P    !@    @    ) @        4    (     0    $    !          (  0      #@   #@    &    \"     8 "
-    "        !0    @    !     0    $         \"0    @         5(!*0 "
+    "        !0    @    !     0    $         \"0    @         ! !+0 "
   }
 }
 #Finite State Machines

@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "11.30"
+    ComputedModelVersion    "11.33"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -19,17 +19,11 @@ Model {
     IsExportFunctionModel   0
     SimulinkSubDomainType   "Simulink"
     NumParameterArguments   0
-    NumExternalFileReferences 4
+    NumExternalFileReferences 3
     ExternalFileReference {
       Reference		      "quarc_library/Communications/Basic/Stream Client"
       Path		      "hq/Stream Client"
       SID		      "7"
-      Type		      "LIBRARY_BLOCK"
-    }
-    ExternalFileReference {
-      Reference		      "quarc_library/Communications/Basic/Stream Client"
-      Path		      "hq/Stream Client1"
-      SID		      "17"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
@@ -112,9 +106,9 @@ Model {
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
 	Extents			[1882.0, 791.0]
-	ZoomFactor		[1.633832976445396]
-	Offset			[229.35976408912188, 288.43119266055044]
-	SceneRectInView		[229.35976408912188, 288.43119266055044, 1151.8925294888597, 484.13761467889913]
+	ZoomFactor		[2.2309941520467835]
+	Offset			[411.0006553079948, 270.72477064220186]
+	SceneRectInView		[411.0006553079948, 270.72477064220186, 843.57011795543906, 354.55045871559633]
       }
       Array {
 	Type			"Simulink.DockComponentInfo"
@@ -172,9 +166,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Rohan"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Jul 21 12:46:16 2022"
-  RTWModifiedTimeStamp	  580308374
-  ModelVersionFormat	  "%<AutoIncrement:11.30>"
+  LastModifiedDate	  "Wed Aug 10 10:06:48 2022"
+  RTWModifiedTimeStamp	  582026807
+  ModelVersionFormat	  "%<AutoIncrement:11.33>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "disabled"
@@ -1347,40 +1341,33 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "163"
+    ZoomFactor		    "223"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "54"
+    SIDHighWatermark	    "56"
     SimulinkSubDomain	    "Simulink"
     Block {
       BlockType		      Mux
       Name		      "Mux"
-      SID		      "52"
-      Ports		      [4, 1]
-      Position		      [935, 571, 940, 609]
-      ZOrder		      343
+      SID		      "55"
+      Ports		      [3, 1]
+      Position		      [975, 546, 980, 584]
+      ZOrder		      346
+      Inputs		      "3"
       DisplayOption	      "bar"
     }
     Block {
       BlockType		      Constant
       Name		      "One"
       SID		      "1"
-      Position		      [430, 340, 460, 370]
+      Position		      [440, 320, 470, 350]
       ZOrder		      295
-      OutDataTypeStr	      "Inherit: Inherit via back propagation"
-    }
-    Block {
-      BlockType		      Constant
-      Name		      "One1"
-      SID		      "14"
-      Position		      [430, 715, 460, 745]
-      ZOrder		      307
       OutDataTypeStr	      "Inherit: Inherit via back propagation"
     }
     Block {
       BlockType		      Constant
       Name		      "One2"
       SID		      "47"
-      Position		      [430, 590, 460, 620]
+      Position		      [440, 570, 470, 600]
       ZOrder		      339
       OutDataTypeStr	      "Inherit: Inherit via back propagation"
     }
@@ -1388,7 +1375,7 @@ Model {
       BlockType		      Constant
       Name		      "One3"
       SID		      "49"
-      Position		      [430, 465, 460, 495]
+      Position		      [440, 445, 470, 475]
       ZOrder		      341
       OutDataTypeStr	      "Inherit: Inherit via back propagation"
     }
@@ -1396,35 +1383,22 @@ Model {
       BlockType		      RateTransition
       Name		      "Rate Transition"
       SID		      "54"
-      Position		      [985, 569, 1025, 611]
+      Position		      [1030, 544, 1070, 586]
       ZOrder		      345
       OutPortSampleTime	      ".1"
     }
     Block {
       BlockType		      Scope
-      Name		      "Scope2"
-      SID		      "37"
-      Ports		      [4]
-      Position		      [940, 493, 970, 527]
-      ZOrder		      328
+      Name		      "Scope"
+      SID		      "56"
+      Ports		      [3]
+      Position		      [1065, 438, 1095, 472]
+      ZOrder		      347
       ScopeSpecificationString "Simulink.scopes.TimeScopeBlockCfg('CurrentConfiguration', extmgr.ConfigurationSet(extm"
       "gr.Configuration('Core','General UI',true),extmgr.Configuration('Core','Source UI',true),extmgr.Configuration('S"
-      "ources','WiredSimulink',true,'DataLoggingVariableName','ScopeData7'),extmgr.Configuration('Visuals','Time Domain"
-      "',true,'SerializedDisplays',{struct('MinYLimReal','-0.29396','MaxYLimReal','0.2955','YLabelReal','','MinYLimMag'"
-      ",'0.00000','MaxYLimMag','0.2955','LegendVisibility','On','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesCol"
-      "or',[0 0 0],'AxesTickColor',[0.686274509803922 0.686274509803922 0.686274509803922],'ColorOrder',[1 1 0.06666666"
-      "66666667;0.0745098039215686 0.623529411764706 1;1 0.411764705882353 0.16078431372549;0.392156862745098 0.8313725"
-      "49019608 0.0745098039215686;0.717647058823529 0.274509803921569 1;0.0588235294117647 1 1;1 0.0745098039215686 0."
-      "650980392156863],'Title','%<SignalLabel>','LinePropertiesCache',{{}},'UserDefinedChannelNames',{{}},'NumLines',1"
-      ",'LineNames',{{'Stream Client2/4'}},'ShowContent',true,'Placement',1)},'DisplayPropertyDefaults',struct('MinYLim"
-      "Real','-0.29396','MaxYLimReal','0.2955','YLabelReal','','MinYLimMag','0.00000','MaxYLimMag','0.2955','LegendVisi"
-      "bility','On','XGrid',true,'YGrid',true,'PlotMagPhase',false,'AxesColor',[0 0 0],'AxesTickColor',[0.6862745098039"
-      "22 0.686274509803922 0.686274509803922],'ColorOrder',[0.0745098039215686 0.623529411764706 1;1 0.411764705882353"
-      " 0.16078431372549;1 1 0.0666666666666667;0.717647058823529 0.274509803921569 1;0.392156862745098 0.8313725490196"
-      "08 0.0745098039215686;0.0588235294117647 1 1;1 0.0745098039215686 0.650980392156863])),extmgr.Configuration('Too"
-      "ls','Plot Navigation',true,'PreviousAutoscale','XY'),extmgr.Configuration('Tools','Measurements',true,'Version',"
-      "'2021a')),'Version','2021a')"
-      NumInputPorts	      "4"
+      "ources','WiredSimulink',true),extmgr.Configuration('Visuals','Time Domain',true),extmgr.Configuration('Tools','P"
+      "lot Navigation',true),extmgr.Configuration('Tools','Measurements',true)),'Version','2021a')"
+      NumInputPorts	      "3"
       Floating		      off
     }
     Block {
@@ -1432,7 +1406,7 @@ Model {
       Name		      "Stream Client"
       SID		      "7"
       Ports		      [2, 5]
-      Position		      [505, 297, 605, 373]
+      Position		      [515, 277, 615, 353]
       ZOrder		      293
       AttributesFormatString  "\"tcpip://192.168.2.32:19001\""
       LibraryVersion	      "1.2097"
@@ -1469,50 +1443,10 @@ Model {
     }
     Block {
       BlockType		      Reference
-      Name		      "Stream Client1"
-      SID		      "17"
-      Ports		      [2, 5]
-      Position		      [505, 672, 605, 748]
-      ZOrder		      306
-      AttributesFormatString  "\"tcpip://192.168.2.28:19004\""
-      LibraryVersion	      "1.2097"
-      SourceBlock	      "quarc_library/Communications/Basic/Stream Client"
-      SourceType	      "Stream Client"
-      SourceProductName	      "QUARC Targets"
-      MultithreadedSim	      "auto"
-      uri_source	      "Specify via dialog (do not evaluate)"
-      uri		      "tcpip://192.168.2.28:19004"
-      apply_uri_to_all_configs on
-      send_buffer_size	      "1460"
-      receive_buffer_size     "1460"
-      byte_order	      "little endian (Intel - LSB first)"
-      optimization	      "Minimum latency"
-      send_options	      "Send all data"
-      receive_options	      "Receive all data"
-      default_value	      "[0]"
-      sample_time	      "qc_get_step_size"
-      active		      off
-      implementation	      "Use blocking I/O in a separate thread"
-      send_fifo_size	      "1000"
-      receive_fifo_size	      "1000"
-      send_priority	      "0"
-      receive_priority	      "0"
-      send_dimensions	      off
-      receive_dimensions      off
-      max_dimensions	      "-1"
-      data_type		      "Inherited via back propagation"
-      type_expr		      "BusObject"
-      Port {
-	PortNumber		4
-	Name			"autonomous_2"
-      }
-    }
-    Block {
-      BlockType		      Reference
       Name		      "Stream Client2"
       SID		      "48"
       Ports		      [2, 5]
-      Position		      [505, 547, 605, 623]
+      Position		      [515, 527, 615, 603]
       ZOrder		      338
       AttributesFormatString  "\"tcpip://192.168.2.29:19003\""
       LibraryVersion	      "1.2097"
@@ -1544,7 +1478,7 @@ Model {
       type_expr		      "BusObject"
       Port {
 	PortNumber		4
-	Name			"human_2"
+	Name			"autonomous_2"
       }
     }
     Block {
@@ -1552,7 +1486,7 @@ Model {
       Name		      "Stream Client3"
       SID		      "50"
       Ports		      [2, 5]
-      Position		      [505, 422, 605, 498]
+      Position		      [515, 402, 615, 478]
       ZOrder		      340
       AttributesFormatString  "\"tcpip://192.168.2.30:19002\""
       LibraryVersion	      "1.2097"
@@ -1592,7 +1526,7 @@ Model {
       Name		      "To File"
       SID		      "53"
       Ports		      [1]
-      Position		      [1070, 575, 1180, 605]
+      Position		      [1115, 550, 1225, 580]
       ZOrder		      344
       Filename		      "burst_transmission.mat"
     }
@@ -1602,16 +1536,16 @@ Model {
       Labels		      [2, 1]
       SrcBlock		      "Stream Client"
       SrcPort		      4
-      Points		      [184, 0; 0, 145; 118, 0]
+      Points		      [156, 0; 0, 115; 173, 0]
       Branch {
-	ZOrder			79
-	Points			[0, 80]
+	ZOrder			122
+	Points			[0, 110]
 	DstBlock		"Mux"
 	DstPort			1
       }
       Branch {
-	ZOrder			78
-	DstBlock		"Scope2"
+	ZOrder			120
+	DstBlock		"Scope"
 	DstPort			1
       }
     }
@@ -1623,32 +1557,6 @@ Model {
       DstPort		      2
     }
     Line {
-      ZOrder		      12
-      SrcBlock		      "One1"
-      SrcPort		      1
-      DstBlock		      "Stream Client1"
-      DstPort		      2
-    }
-    Line {
-      Name		      "autonomous_2"
-      ZOrder		      60
-      Labels		      [1, 1]
-      SrcBlock		      "Stream Client1"
-      SrcPort		      4
-      Points		      [184, 0; 0, -200; 71, 0]
-      Branch {
-	ZOrder			85
-	Points			[0, 80]
-	DstBlock		"Mux"
-	DstPort			4
-      }
-      Branch {
-	ZOrder			84
-	DstBlock		"Scope2"
-	DstPort			4
-      }
-    }
-    Line {
       ZOrder		      71
       SrcBlock		      "One2"
       SrcPort		      1
@@ -1656,21 +1564,21 @@ Model {
       DstPort		      2
     }
     Line {
-      Name		      "human_2"
+      Name		      "autonomous_2"
       ZOrder		      73
-      Labels		      [2, 0]
+      Labels		      [1, 0]
       SrcBlock		      "Stream Client2"
       SrcPort		      4
-      Points		      [131, 0; 0, -85; 141, 0]
+      Points		      [156, 0; 0, -115; 130, 0]
       Branch {
-	ZOrder			83
-	Points			[0, 80]
+	ZOrder			126
+	Points			[0, 110]
 	DstBlock		"Mux"
 	DstPort			3
       }
       Branch {
-	ZOrder			82
-	DstBlock		"Scope2"
+	ZOrder			125
+	DstBlock		"Scope"
 	DstPort			3
       }
     }
@@ -1687,23 +1595,24 @@ Model {
       Labels		      [1, 0]
       SrcBlock		      "Stream Client3"
       SrcPort		      4
-      Points		      [131, 0; 0, 30; 159, 0]
+      Points		      [310, 0]
       Branch {
-	ZOrder			81
-	Points			[0, 80]
+	ZOrder			124
+	Points			[0, 110]
 	DstBlock		"Mux"
 	DstPort			2
       }
       Branch {
-	ZOrder			80
-	DstBlock		"Scope2"
+	ZOrder			123
+	DstBlock		"Scope"
 	DstPort			2
       }
     }
     Line {
-      ZOrder		      86
+      ZOrder		      117
       SrcBlock		      "Mux"
       SrcPort		      1
+      Points		      [45, 0]
       DstBlock		      "Rate Transition"
       DstPort		      1
     }

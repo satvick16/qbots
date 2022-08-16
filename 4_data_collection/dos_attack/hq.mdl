@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "11.30"
+    ComputedModelVersion    "11.31"
     NumModelReferences	    0
     NumTestPointedSignals   0
     NumProvidedFunctions    0
@@ -19,17 +19,11 @@ Model {
     IsExportFunctionModel   0
     SimulinkSubDomainType   "Simulink"
     NumParameterArguments   0
-    NumExternalFileReferences 4
+    NumExternalFileReferences 3
     ExternalFileReference {
       Reference		      "quarc_library/Communications/Basic/Stream Client"
       Path		      "hq/Stream Client"
       SID		      "7"
-      Type		      "LIBRARY_BLOCK"
-    }
-    ExternalFileReference {
-      Reference		      "quarc_library/Communications/Basic/Stream Client"
-      Path		      "hq/Stream Client1"
-      SID		      "17"
       Type		      "LIBRARY_BLOCK"
     }
     ExternalFileReference {
@@ -112,9 +106,9 @@ Model {
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
 	Extents			[1882.0, 791.0]
-	ZoomFactor		[1.633832976445396]
-	Offset			[229.35976408912188, 288.43119266055044]
-	SceneRectInView		[229.35976408912188, 288.43119266055044, 1151.8925294888597, 484.13761467889913]
+	ZoomFactor		[2.2309941520467835]
+	Offset			[383.52096985583222, 290.72477064220186]
+	SceneRectInView		[383.52096985583222, 290.72477064220186, 843.57011795543906, 354.55045871559633]
       }
       Array {
 	Type			"Simulink.DockComponentInfo"
@@ -172,9 +166,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Rohan"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Thu Jul 21 12:46:28 2022"
-  RTWModifiedTimeStamp	  580308388
-  ModelVersionFormat	  "%<AutoIncrement:11.30>"
+  LastModifiedDate	  "Tue Aug 16 10:45:54 2022"
+  RTWModifiedTimeStamp	  582547551
+  ModelVersionFormat	  "%<AutoIncrement:11.31>"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
   LibraryLinkDisplay	  "disabled"
@@ -1347,7 +1341,7 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "163"
+    ZoomFactor		    "223"
     ReportName		    "simulink-default.rpt"
     SIDHighWatermark	    "54"
     SimulinkSubDomain	    "Simulink"
@@ -1366,14 +1360,6 @@ Model {
       SID		      "1"
       Position		      [430, 340, 460, 370]
       ZOrder		      295
-      OutDataTypeStr	      "Inherit: Inherit via back propagation"
-    }
-    Block {
-      BlockType		      Constant
-      Name		      "One1"
-      SID		      "14"
-      Position		      [430, 715, 460, 745]
-      ZOrder		      307
       OutDataTypeStr	      "Inherit: Inherit via back propagation"
     }
     Block {
@@ -1469,46 +1455,6 @@ Model {
     }
     Block {
       BlockType		      Reference
-      Name		      "Stream Client1"
-      SID		      "17"
-      Ports		      [2, 5]
-      Position		      [505, 672, 605, 748]
-      ZOrder		      306
-      AttributesFormatString  "\"tcpip://192.168.2.28:19004\""
-      LibraryVersion	      "1.2097"
-      SourceBlock	      "quarc_library/Communications/Basic/Stream Client"
-      SourceType	      "Stream Client"
-      SourceProductName	      "QUARC Targets"
-      MultithreadedSim	      "auto"
-      uri_source	      "Specify via dialog (do not evaluate)"
-      uri		      "tcpip://192.168.2.28:19004"
-      apply_uri_to_all_configs on
-      send_buffer_size	      "1460"
-      receive_buffer_size     "1460"
-      byte_order	      "little endian (Intel - LSB first)"
-      optimization	      "Minimum latency"
-      send_options	      "Send all data"
-      receive_options	      "Receive all data"
-      default_value	      "[0]"
-      sample_time	      "qc_get_step_size"
-      active		      off
-      implementation	      "Use blocking I/O in a separate thread"
-      send_fifo_size	      "1000"
-      receive_fifo_size	      "1000"
-      send_priority	      "0"
-      receive_priority	      "0"
-      send_dimensions	      off
-      receive_dimensions      off
-      max_dimensions	      "-1"
-      data_type		      "Inherited via back propagation"
-      type_expr		      "BusObject"
-      Port {
-	PortNumber		4
-	Name			"autonomous_2"
-      }
-    }
-    Block {
-      BlockType		      Reference
       Name		      "Stream Client2"
       SID		      "48"
       Ports		      [2, 5]
@@ -1544,7 +1490,7 @@ Model {
       type_expr		      "BusObject"
       Port {
 	PortNumber		4
-	Name			"human_2"
+	Name			"autonomous_2"
       }
     }
     Block {
@@ -1623,32 +1569,6 @@ Model {
       DstPort		      2
     }
     Line {
-      ZOrder		      12
-      SrcBlock		      "One1"
-      SrcPort		      1
-      DstBlock		      "Stream Client1"
-      DstPort		      2
-    }
-    Line {
-      Name		      "autonomous_2"
-      ZOrder		      60
-      Labels		      [1, 1]
-      SrcBlock		      "Stream Client1"
-      SrcPort		      4
-      Points		      [184, 0; 0, -200; 71, 0]
-      Branch {
-	ZOrder			85
-	Points			[0, 80]
-	DstBlock		"Mux"
-	DstPort			4
-      }
-      Branch {
-	ZOrder			84
-	DstBlock		"Scope2"
-	DstPort			4
-      }
-    }
-    Line {
       ZOrder		      71
       SrcBlock		      "One2"
       SrcPort		      1
@@ -1656,7 +1576,7 @@ Model {
       DstPort		      2
     }
     Line {
-      Name		      "human_2"
+      Name		      "autonomous_2"
       ZOrder		      73
       Labels		      [2, 0]
       SrcBlock		      "Stream Client2"
